@@ -88,13 +88,24 @@
         radial-gradient(ellipse 60% 40% at 80% 70%, rgba(26,54,93,0.05) 0%, transparent 50%);
       pointer-events: none;
     }
-    .hero-img {
+    .hero-svg-wrap {
+      position: relative;
       max-width: 760px; width: 88%;
+      margin: 36px auto 0;
       opacity: 0; animation: fadeIn 1s 0.2s ease forwards;
-      margin-top: 36px;
-      margin-bottom: 0;
+      container-type: inline-size;
+    }
+    .hero-img {
+      width: 100%; display: block;
       filter: drop-shadow(0 8px 32px rgba(25,53,89,0.10));
     }
+    .hero-text-he {
+      position: absolute; right: 0; left: 0; text-align: center;
+      font-family: 'Heebo', sans-serif; direction: rtl; white-space: nowrap; line-height: 1;
+    }
+    .hero-text-1 { top: 2.4cqw; font-weight: 900; font-size: 8.4cqw; letter-spacing: 0.2cqw; color: var(--navy); }
+    .hero-text-2 { top: 15cqw; font-weight: 700; font-size: 3.5cqw; letter-spacing: 0.3cqw; color: var(--gold-muted); }
+    .hero-text-3 { top: 35.2cqw; font-weight: 700; font-size: 3.5cqw; letter-spacing: 0.2cqw; color: var(--navy); }
     .hero-fruit-row {
       max-width: 302px; width: 44%;
       margin: 28px auto 44px;
@@ -394,7 +405,7 @@
     }
     .poem-card > * { position: relative; z-index: 1; }
     .poem-corner { display: none; }
-    .poem-title { font-family: 'Heebo', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--navy); margin-bottom: 6px; text-align: center; letter-spacing: 1px; }
+    .poem-title { font-family: 'Heebo', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--gold); margin-bottom: 6px; text-align: center; letter-spacing: 1px; }
     .poem-author { font-size: 0.88rem; color: var(--gold-muted); font-weight: 600; margin-bottom: 36px; text-align: center; letter-spacing: 2px; }
     .poem-divider { width: 48px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 32px; }
     .poem-stanza { text-align: center; margin-bottom: 28px; line-height: 2.3; font-family: 'Heebo', sans-serif; font-size: 1.08rem; color: var(--text); font-weight: 400; }
@@ -525,7 +536,7 @@
       .container { padding: 0 16px; }
       .hero { min-height: auto; padding-bottom: 40px; }
       .hero-content { padding: 0 24px 44px; }
-      .hero-img { margin-top: 28px !important; margin-bottom: 0 !important; width: 96%; }
+      .hero-svg-wrap { margin-top: 28px !important; margin-bottom: 0 !important; width: 96%; }
       .hero-fruit-row { margin-top: 14px; }
       .countdown-card { padding: 20px 18px 16px; }
       .hero-countdown { gap: 14px; }
@@ -615,19 +626,20 @@
 <!-- ══ HERO ══ -->
 <section class="hero" id="top">
   <!-- Custom Rosh Hashana illustration (inline SVG — no external asset needed) -->
-  <svg class="hero-img" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="שנה טובה - ניוזלטר ראש השנה תשפ&quot;ז - פורן שרים">
-    <!-- soft sparkle dots -->
-    <g fill="#B8862E" opacity="0.3">
-      <circle cx="100" cy="30" r="3"/><circle cx="500" cy="20" r="2.5"/><circle cx="900" cy="60" r="3"/>
-    </g>
-
-    <!-- Center wordmark — true center, very generously spaced -->
-    <text x="500" y="90" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="900" font-size="84" letter-spacing="2" fill="var(--navy)">שָׁנָה טוֹבָה</text>
-    <text x="500" y="178" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="700" font-size="35" letter-spacing="3" fill="var(--gold-muted)">ראש השנה תשפ"ז</text>
-    <path d="M370,230 H630" stroke="var(--gold)" stroke-width="1.5" opacity="0.65"/>
-    <text x="500" y="301" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="600" font-size="35" letter-spacing="6" fill="var(--teal)">NEWSLETTER</text>
-    <text x="500" y="379" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="700" font-size="35" letter-spacing="2" fill="var(--navy)">פורן שרים</text>
-  </svg>
+  <!-- Hebrew text is rendered as HTML overlays, not inside the SVG <text> tags, to avoid a Safari/iOS bug that reverses RTL glyph order inside SVG text. -->
+  <div class="hero-svg-wrap">
+    <svg class="hero-img" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="שנה טובה - ניוזלטר ראש השנה תשפ&quot;ז - פורן שרים">
+      <!-- soft sparkle dots -->
+      <g fill="#B8862E" opacity="0.3">
+        <circle cx="100" cy="30" r="3"/><circle cx="500" cy="20" r="2.5"/><circle cx="900" cy="60" r="3"/>
+      </g>
+      <path d="M370,230 H630" stroke="var(--gold)" stroke-width="1.5" opacity="0.65"/>
+      <text x="500" y="301" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="600" font-size="35" letter-spacing="6" fill="var(--teal)">NEWSLETTER</text>
+    </svg>
+    <div class="hero-text-he hero-text-1">שָׁנָה טוֹבָה</div>
+    <div class="hero-text-he hero-text-2">ראש השנה תשפ"ז</div>
+    <div class="hero-text-he hero-text-3">פורן שרים</div>
+  </div>
 
   <img src="images/1-hero-fruit-row.png" alt="תפוח, דבש ורימון" class="hero-fruit-row">
 
@@ -947,10 +959,10 @@
 
       <div class="birth-card reveal">
         <div class="birth-photo">
-          <img src="images/6-births-hararis.png" alt="הבן של גל ורועי" onerror="this.src='images/placeholder.svg'">
+          <img src="images/6-births-arbel.png" alt="ארבל" onerror="this.src='images/placeholder.svg'">
         </div>
-        <div class="birth-parent">גל ורועי הררי</div>
-        <div class="birth-baby">השם יעודכן בקרוב (בן)</div>
+        <div class="birth-parent">בר ומאיר יונגסטר</div>
+        <div class="birth-baby">ארבל (בת)</div>
       </div>
 
       <div class="birth-card reveal">
@@ -963,10 +975,10 @@
 
       <div class="birth-card reveal">
         <div class="birth-photo">
-          <img src="images/6-births-arbel.png" alt="ארבל" onerror="this.src='images/placeholder.svg'">
+          <img src="images/6-births-hararis.png" alt="הבן של גל ורועי" onerror="this.src='images/placeholder.svg'">
         </div>
-        <div class="birth-parent">בר ומאיר יונגסטר</div>
-        <div class="birth-baby">ארבל (בת)</div>
+        <div class="birth-parent">גל ורועי הררי</div>
+        <div class="birth-baby">השם יעודכן בקרוב (בן)</div>
       </div>
 
     </div>
