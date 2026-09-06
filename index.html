@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ניוזלטר ראש השנה תשפ"ז | פורן שרים</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%AF%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="ניוזלטר ראש השנה תשפ&quot;ז | פורן שרים">
+  <meta property="og:description" content="שנה טובה ומתוקה ממשפחת פורן שרים - כל מה שקרה אצלנו השנה, במקום אחד.">
+  <meta property="og:image" content="images/1-hero-fruit-row.png">
+  <meta property="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Brand Colors (Poran Shrem official palette) */
+      --navy: #1A365D;
+      --navy-light: #24406E;
+      --teal: #0D8496;
+      --teal-light: #9DD0D5;
+      --brand-gray: #CBD5E0;
+      --ink: #0D1829;
+
+      /* Festive Rosh Hashana accent — honey gold */
+      --gold: #B8862E;
+      --gold-light: #D9AE5C;
+      --gold-muted: #96702A;
+
+      /* Pomegranate — used only for the literal fruit illustration, never as a UI accent */
+      --pom: #8E2A3B;
+      --pom-light: #B85463;
+
+      /* Surfaces — warm, festive base */
+      --cream: #FAF6EE;
+      --cream-warm: #F3EBDA;
+      --paper: #FFFFFF;
+
+      /* Text */
+      --text: #1A2332;
+      --text-secondary: #4A5568;
+      --text-muted: #8896AB;
+
+      /* Rules */
+      --rule: #C7CCD9;
+      --rule-light: #DDE2EC;
+
+      /* Status */
+      --green: #2D7A4F;
+      --green-bg: #E6F4EC;
+      --red-bg: #FCE8E8;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--cream); }
+
+    body {
+      font-family: 'Heebo', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection { background: var(--gold); color: var(--paper); }
+    html { overflow-x: clip; }
+    body { overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+    .container--narrow { max-width: 740px; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #FDFBF6 0%, #F6F1E6 100%);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 30%, rgba(184,134,46,0.09) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 70%, rgba(26,54,93,0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-img {
+      max-width: 760px; width: 88%;
+      opacity: 0; animation: fadeIn 1s 0.2s ease forwards;
+      margin-top: 36px;
+      margin-bottom: 0;
+      filter: drop-shadow(0 8px 32px rgba(25,53,89,0.10));
+    }
+    .hero-fruit-row {
+      max-width: 302px; width: 44%;
+      margin: 28px auto 44px;
+      opacity: 0; animation: fadeIn 1s 0.4s ease forwards;
+      filter: drop-shadow(0 6px 18px rgba(25,53,89,0.12));
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      text-align: center;
+      padding: 0 44px 80px;
+      max-width: 780px;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 5px; text-transform: uppercase;
+      border: 1px solid var(--brand-gray);
+      padding: 10px 24px;
+      margin-bottom: 20px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(6px);
+      opacity: 0; animation: fadeIn 0.8s 0.5s ease forwards;
+    }
+    .hero-sub {
+      font-family: 'Heebo', sans-serif;
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      color: var(--navy); font-weight: 500;
+      letter-spacing: 3px; margin-bottom: 36px;
+      opacity: 0; animation: fadeIn 0.8s 0.6s ease forwards;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(250,246,238,0.96);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule-light);
+    }
+    body { padding-top: 68px; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { height: 50px; cursor: pointer; }
+    .nav-links { display: flex; gap: 0; list-style: none; }
+    .nav-links a {
+      display: block; padding: 8px 16px; text-decoration: none;
+      font-size: 0.78rem; font-weight: 500; color: var(--text-muted);
+      transition: color 0.2s; letter-spacing: 0.3px;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy) !important; color: #FFF !important;
+      font-weight: 600 !important; padding: 7px 20px !important; border-radius: 4px !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; }
+    .nav-mobile-btn {
+      display: none; background: none; border: none; cursor: pointer;
+      width: 36px; height: 36px; position: relative;
+    }
+    .nav-mobile-btn span {
+      display: block; width: 20px; height: 1.5px; background: var(--navy);
+      position: absolute; right: 8px; transition: all 0.3s;
+    }
+    .nav-mobile-btn span:nth-child(1) { top: 12px; }
+    .nav-mobile-btn span:nth-child(2) { top: 17px; }
+    .nav-mobile-btn span:nth-child(3) { top: 22px; }
+    .nav-mobile-btn.open span:nth-child(1) { top: 17px; transform: rotate(45deg); }
+    .nav-mobile-btn.open span:nth-child(2) { opacity: 0; }
+    .nav-mobile-btn.open span:nth-child(3) { top: 17px; transform: rotate(-45deg); }
+
+    /* ── Section ── */
+    .section { padding: 96px 0; background: linear-gradient(180deg, #FDFBF6 0%, #F6F1E6 100%); }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-tag {
+      display: inline-block; font-size: 0.8rem; font-weight: 700;
+      color: var(--gold); letter-spacing: 5px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Heebo', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 900; color: var(--navy); line-height: 1.2;
+    }
+    .section-rule { width: 48px; height: 2px; background: var(--gold); margin: 20px auto 0; }
+
+    /* ── CEO ── */
+    .ceo-photo-banner { max-width: 480px; margin: 0 auto 48px; text-align: center; }
+    .ceo-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 12px rgba(25,53,89,0.08); }
+    .ceo-photo-caption { margin-top: 12px; font-size: 0.82rem; font-weight: 600; color: var(--navy); }
+    .ceo-photo-title { font-size: 0.75rem; color: var(--text-muted); }
+    .ceo-text-area { position: relative; max-width: 740px; margin: 0 auto; }
+    .ceo-mark {
+      font-family: 'Heebo', sans-serif; font-size: 8rem; line-height: 0.6;
+      color: var(--rule-light); position: absolute; top: -16px; right: 0;
+      user-select: none; pointer-events: none;
+    }
+    .ceo-body { position: relative; font-size: 15.5px; line-height: 2; color: var(--text-secondary); }
+    .ceo-body p + p { margin-top: 12px; }
+    .ceo-footer {
+      margin-top: 40px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .ceo-sign { font-weight: 800; font-size: 1rem; color: var(--navy); }
+    .ceo-sign-title { font-size: 0.82rem; color: var(--text-muted); }
+
+    /* ── Two-column profile (Lior / spotlight) ── */
+    .lior-section { display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start; }
+    .lior-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 12px rgba(25,53,89,0.08); }
+    .spotlight-photo { aspect-ratio: 1/1; object-fit: contain; background: var(--paper); }
+    .lior-body { font-size: 15.5px; line-height: 2; color: var(--text-secondary); }
+    .lior-body p + p { margin-top: 12px; }
+    .lior-sign { margin-top: 24px; font-weight: 800; font-size: 1rem; color: var(--navy); }
+    .lior-body h4 { color: var(--navy); font-size: 0.95rem; margin-top: 18px; margin-bottom: 4px; }
+
+    /* ── Spotlight profiles ── */
+    .spotlight { margin-bottom: 64px; }
+    .spotlight:last-child { margin-bottom: 0; }
+    .spotlight-role {
+      display: inline-block; margin-top: 8px; padding: 3px 12px;
+      background: var(--teal); color: #fff; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px;
+      border-radius: 3px;
+    }
+    .spotlight-quote {
+      margin-top: 16px; padding: 14px 18px; background: var(--cream);
+      font-size: 0.85rem; color: var(--gold-muted); font-weight: 600;
+      border-right: 3px solid var(--gold); line-height: 1.7; border-radius: 4px;
+    }
+
+    /* ── Projects ── */
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .project-card {
+      background: var(--paper); padding: 0; position: relative; transition: background 0.25s;
+      display: grid; grid-template-columns: 240px 1fr; align-items: stretch;
+      border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(25,53,89,0.08);
+    }
+    .project-card:hover .project-card-body { background: var(--cream); }
+    .project-img-wrap {
+      height: 100%; min-height: 180px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      border-left: 1px solid var(--rule-light); padding: 28px;
+    }
+    .project-img-wrap img { max-height: 110px; max-width: 85%; width: auto; height: auto; object-fit: contain; }
+    .project-card--featured { grid-column: 1 / -1; max-width: 480px; width: 100%; margin: 0 auto; }
+    .projects-divider { grid-column: 1 / -1; width: 260px; max-width: 60%; height: 1px; background: var(--gold); opacity: 0.65; margin: 8px auto; }
+    .project-card-body { padding: 18px 22px; display: flex; flex-direction: column; background: var(--paper); transition: background 0.25s; }
+    .miluim-names { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 640px; margin: 28px auto 0; }
+    .miluim-names span {
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #fff;
+      font-size: 0.82rem; font-weight: 600; padding: 8px 16px; border-radius: 20px;
+    }
+    .project-month {
+      display: inline-block; font-size: 0.68rem; font-weight: 700;
+      color: var(--text-muted); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .project-name { font-weight: 700; font-size: 1.2rem; color: var(--navy); line-height: 1.5; margin-bottom: 4px; min-height: 3em; }
+    .project-client-row { display: contents; }
+    .project-client { font-size: 0.85rem; color: var(--teal); }
+    .project-badge {
+      display: inline-block; align-self: flex-start; margin-top: 10px; padding: 3px 10px;
+      background: var(--navy); color: var(--gold-light); border-radius: 4px;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px;
+    }
+
+    /* ── Completed ── */
+    .completed-list { display: grid; gap: 32px; }
+    .completed-card {
+      display: grid; grid-template-columns: 240px 1fr; gap: 28px; align-items: stretch; height: 190px;
+      border-radius: 10px; background: var(--paper); overflow: hidden; box-shadow: 0 2px 12px rgba(25,53,89,0.08);
+    }
+    .completed-img { width: 100%; height: 100%; object-fit: cover; min-height: 180px; }
+    .completed-body { padding: 18px 22px 18px 0; display: flex; flex-direction: column; overflow: hidden; }
+    .completed-name { font-family: 'Heebo', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 18px; }
+    .completed-status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--teal); margin-bottom: 18px; }
+    .completed-status svg { width: 16px; height: 16px; stroke: var(--teal); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .completed-credits { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+    .completed-credits strong { color: var(--text-secondary); }
+
+    /* ── Births / Weddings ── */
+    .births-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; max-width: 720px; margin: 0 auto; }
+    @media (min-width: 901px) {
+      #births .births-grid { grid-template-columns: repeat(3, 1fr); max-width: 760px; }
+      #weddings .births-grid { max-width: 900px; }
+    }
+    .birth-card { text-align: center; padding: 40px 24px; border-radius: 10px; background: var(--paper); position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(25,53,89,0.08); }
+    .birth-photo { width: 120px; height: 120px; border-radius: 6px; border: 2px solid var(--brand-gray); margin: 0 auto 16px; overflow: hidden; }
+    .birth-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+    .birth-icon { font-size: 2.2rem; margin-bottom: 12px; }
+    .birth-parent { font-weight: 700; font-size: 1.05rem; color: var(--navy); margin-bottom: 4px; }
+    .birth-baby { font-size: 0.9rem; color: var(--gold); font-weight: 600; }
+    .birth-blessing { margin-top: 12px; font-size: 0.82rem; color: var(--text-muted); font-style: italic; }
+
+    /* ── Employees ── */
+    .employees-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; max-width: 980px; margin: 0 auto; }
+    .emp-card { display: flex; flex-direction: column; height: 511px; background: var(--paper); overflow: hidden; border-radius: 10px; box-shadow: 0 2px 12px rgba(25,53,89,0.08); }
+    .emp-photo { width: 100%; height: 240px; overflow: hidden; flex-shrink: 0; background: var(--cream-warm); }
+    .emp-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(100%); transition: filter 0.5s ease; }
+    .emp-card:hover .emp-photo img { filter: grayscale(0%); }
+    .emp-body { padding: 18px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; min-height: 0; }
+    .emp-body-top { display: flex; flex-direction: column; gap: 4px; text-align: center; }
+    .emp-body-name { font-weight: 800; font-size: 1.05rem; color: var(--navy); }
+    .emp-body-role { display: inline-block; padding: 3px 12px; align-self: center; background: var(--teal); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.5px; border-radius: 3px; }
+    .emp-body-middle { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
+    .emp-info-row { display: flex; gap: 8px; font-size: 0.78rem; line-height: 1.5; align-items: flex-start; }
+    .emp-label { font-weight: 700; color: var(--navy); min-width: 52px; font-size: 0.72rem; flex-shrink: 0; }
+    .emp-value { color: var(--text-secondary); }
+    .emp-motto-row { display: flex; flex-direction: column; gap: 4px; margin-top: auto; }
+    .emp-motto { padding: 8px 12px; background: var(--cream); font-size: 0.76rem; color: var(--gold-muted); font-weight: 600; border-right: 3px solid var(--gold); line-height: 1.5; border-radius: 4px; height: calc(0.76rem * 1.5 * 2 + 16px); display: flex; align-items: center; overflow: hidden; }
+    .emp-pending { margin: auto 0; font-size: 0.8rem; color: var(--text-muted); font-style: italic; text-align: center; padding: 8px 0; }
+
+    /* ── Friend brings friend ── */
+    .friend-section { text-align: center; }
+    .friend-img { width: 100%; max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; object-fit: cover; object-position: top; display: block; border-radius: 10px; box-shadow: 0 2px 12px rgba(25,53,89,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+    .friend-section a:hover .friend-img { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(25,53,89,0.15); }
+    .text-link { color: var(--teal); text-decoration: underline; transition: color 0.2s; }
+    .text-link:hover { color: var(--gold); }
+
+    /* ── Press ── */
+    .press-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 780px; margin: 0 auto; }
+    .press-card { border-radius: 10px; background: var(--paper); overflow: hidden; text-decoration: none; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 2px 12px rgba(25,53,89,0.08); }
+    .press-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(25,53,89,0.1); }
+    .press-img { width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: top; flex-shrink: 0; }
+    .press-body { padding: 14px 16px; display: flex; flex-direction: column; flex: 1; }
+    .press-title { font-size: 0.95rem; font-weight: 700; color: var(--navy); line-height: 1.5; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: calc(0.95rem * 1.5 * 2); }
+    .press-byline { font-size: 0.8rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 2px; }
+    .press-date { font-size: 0.72rem; color: var(--text-muted); }
+    .press-date-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; }
+    .press-brand { height: 18px; width: auto; object-fit: contain; flex-shrink: 0; }
+
+    /* ── Gallery ── */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .gallery-grid a { display: block; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(25,53,89,0.08); cursor: pointer; }
+    .gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; transition: transform 0.4s; }
+    .gallery-grid a:hover img { transform: scale(1.03); }
+    .gallery-lightbox {
+      display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(15,20,30,0.94);
+      align-items: center; justify-content: center;
+    }
+    .gallery-lightbox.open { display: flex; }
+    .gallery-lb-img { max-width: 90vw; max-height: 86vh; object-fit: contain; border-radius: 6px; box-shadow: 0 12px 48px rgba(0,0,0,0.5); }
+    .gallery-lb-close {
+      position: absolute; top: 18px; left: 18px; background: rgba(255,255,255,0.12); border: none; color: #fff;
+      width: 44px; height: 44px; border-radius: 50%; font-size: 1.8rem; line-height: 1; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+    }
+    .gallery-lb-close:hover { background: rgba(255,255,255,0.22); }
+    .gallery-lb-nav {
+      position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.12); border: none; color: #fff;
+      width: 48px; height: 48px; border-radius: 50%; font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+    }
+    .gallery-lb-nav:hover { background: rgba(255,255,255,0.22); }
+    .gallery-lb-prev { right: 18px; }
+    .gallery-lb-next { left: 18px; }
+    .gallery-lb-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.75); font-size: 0.82rem; letter-spacing: 0.5px; }
+
+    /* ── Quiz ── */
+    .crossword-block { max-width: 880px; margin: 0 auto; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 22px; font-family: 'Heebo', sans-serif; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s; border: none; border-radius: 6px; }
+    .btn-dark { background: var(--navy); color: #FFF; }
+    .btn-dark:hover { background: var(--gold); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(184,134,46,0.35); }
+    .quiz-card { background: var(--paper); border-radius: 10px; box-shadow: 0 2px 12px rgba(25,53,89,0.08); padding: 36px 32px; text-align: center; }
+    .quiz-counter { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 20px; font-weight: 600; }
+    .quiz-question { font-family: 'Heebo', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--navy); line-height: 1.5; margin-bottom: 28px; }
+    .quiz-options { display: grid; gap: 10px; max-width: 500px; margin: 0 auto; }
+    .quiz-option { display: block; width: 100%; padding: 14px 20px; background: var(--cream); border: 1px solid var(--rule-light); font-size: 0.92rem; font-family: 'Heebo', sans-serif; color: var(--text); cursor: pointer; transition: all 0.2s; text-align: right; }
+    .quiz-option:hover:not(.picked) { border-color: var(--gold); background: var(--paper); }
+    .quiz-option.picked.right { background: var(--green-bg); border-color: var(--green); color: var(--green); font-weight: 700; }
+    .quiz-option.picked.wrong { background: var(--red-bg); border-color: #C44; color: #B33; }
+    .quiz-option.reveal-right { border-color: var(--green); background: var(--green-bg); font-weight: 700; color: var(--green); }
+    .quiz-option.disabled { pointer-events: none; opacity: 0.6; }
+    #quizDots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+    .quiz-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rule); transition: background 0.3s; }
+    .quiz-dot.active { background: var(--gold); }
+    .quiz-dot.correct { background: var(--green); }
+    .quiz-dot.incorrect { background: #C44; }
+
+    /* ── Social ── */
+    .social-grid { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 32px; }
+    .social-link {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+      width: 68px; text-decoration: none; color: var(--navy);
+      font-size: 0.72rem; font-weight: 600;
+      transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    }
+    .social-link img { width: 48px; height: 48px; border-radius: 12px; transition: transform 0.25s, box-shadow 0.25s; }
+    .social-link span { font-size: 0.68rem; font-weight: 500; color: var(--text-muted); }
+    .social-link:hover { transform: translateY(-4px); }
+    .social-link:hover img { box-shadow: 0 8px 20px rgba(25,53,89,0.22); }
+
+    /* ── Poem ── */
+    .poem-card {
+      max-width: 640px; margin: 0 auto; background: var(--paper);
+      border-radius: 10px; padding: 56px 48px; box-shadow: 0 2px 12px rgba(25,53,89,0.08); position: relative;
+    }
+    .poem-card::after {
+      content: '\201D'; position: absolute; top: 20px; right: 28px;
+      font-family: 'Heebo', sans-serif; font-size: 6rem; line-height: 1;
+      color: rgba(184,134,46,0.15); pointer-events: none;
+    }
+    .poem-card > * { position: relative; z-index: 1; }
+    .poem-corner { display: none; }
+    .poem-title { font-family: 'Heebo', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--navy); margin-bottom: 6px; text-align: center; letter-spacing: 1px; }
+    .poem-author { font-size: 0.88rem; color: var(--gold-muted); font-weight: 600; margin-bottom: 36px; text-align: center; letter-spacing: 2px; }
+    .poem-divider { width: 48px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 32px; }
+    .poem-stanza { text-align: center; margin-bottom: 28px; line-height: 2.3; font-family: 'Heebo', sans-serif; font-size: 1.08rem; color: var(--text); font-weight: 400; }
+    .poem-stanza:last-of-type { margin-bottom: 0; }
+    .poem-ornament { text-align: center; color: var(--gold); font-size: 0.9rem; margin: 32px 0 8px; letter-spacing: 16px; opacity: 0.6; }
+    .poem-note { max-width: 640px; margin: 20px auto 0; text-align: center; font-size: 0.72rem; color: var(--text-muted); line-height: 1.7; }
+    @media (max-width: 600px) {
+      #social p { white-space: normal !important; }
+      .social-grid { display: grid; grid-template-columns: repeat(3, auto); justify-content: center; justify-items: center; row-gap: 28px; column-gap: 40px; }
+      .social-link { width: auto; }
+      .social-link img { width: 46px; height: 46px; }
+      .poem-card { padding: 36px 24px; }
+      .poem-card::after { font-size: 4rem; top: 12px; right: 16px; }
+      .poem-stanza { font-size: 0.98rem; line-height: 2.1; }
+      .poem-title { font-size: 1.4rem; }
+      .poem-corner { width: 18px; height: 18px; }
+    }
+
+    .footer { background: var(--cream); padding: 56px 0; text-align: center; border-top: 2px solid var(--rule-light); }
+    .footer-logo { height: 28px; margin: 0 auto 24px; opacity: 0.8; cursor: pointer; }
+    .footer-blessing {
+      font-family: 'Heebo', sans-serif; font-size: 4rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 28px;
+      background: linear-gradient(90deg, var(--navy), var(--teal)); -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .footer-hero-echo { display: block; max-width: 130px; width: 30%; margin: 0 auto 28px; opacity: 0.7; }
+    .footer-copy { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 1px; }
+
+    /* ── Reveal ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .stagger > * { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .stagger.visible > *:nth-child(1) { transition-delay: 0s; }
+    .stagger.visible > *:nth-child(2) { transition-delay: 0.08s; }
+    .stagger.visible > *:nth-child(3) { transition-delay: 0.16s; }
+    .stagger.visible > *:nth-child(4) { transition-delay: 0.24s; }
+    .stagger.visible > *:nth-child(5) { transition-delay: 0.32s; }
+    .stagger.visible > *:nth-child(6) { transition-delay: 0.4s; }
+    .stagger.visible > *:nth-child(7) { transition-delay: 0.48s; }
+    .stagger.visible > *:nth-child(8) { transition-delay: 0.56s; }
+    .stagger.visible > *:nth-child(9) { transition-delay: 0.64s; }
+    .stagger.visible > *:nth-child(10) { transition-delay: 0.72s; }
+    .stagger.visible > * { opacity: 1; transform: none; }
+
+    .project-card, .emp-card, .birth-card, .completed-card { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s, background 0.25s; }
+    .project-card:hover, .emp-card:hover, .birth-card:hover, .completed-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(25,53,89,0.1); }
+    .hero-stat strong { display: block; font-variant-numeric: tabular-nums; }
+
+    .cw-hero-banner { text-align: center; margin-bottom: 64px; }
+    .cw-emoji-row { font-size: 2rem; letter-spacing: 12px; margin-bottom: 16px; animation: cwEmojiBounce 3s ease-in-out infinite; }
+    @keyframes cwEmojiBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+    /* ── Back to top ── */
+    .back-to-top {
+      position: fixed; bottom: 32px; left: 32px; z-index: 9998;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--navy); color: var(--gold); border: 2px solid var(--gold);
+      font-size: 1.2rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transform: translateY(20px); pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s, background 0.2s;
+      box-shadow: 0 4px 16px rgba(25,53,89,0.2);
+    }
+    .back-to-top.visible { opacity: 1; transform: none; pointer-events: auto; }
+    .back-to-top:hover { background: var(--gold); color: var(--navy); }
+
+    /* ── Countdown ── */
+    .countdown-card {
+      display: inline-block; border-radius: 10px; box-shadow: 0 2px 12px rgba(25,53,89,0.08);
+      background: rgba(255,255,255,0.65); backdrop-filter: blur(6px);
+      padding: 26px 36px 22px; opacity: 0; animation: fadeIn 0.8s 0.7s ease forwards;
+    }
+    .countdown-title { font-size: 0.85rem; font-weight: 700; color: var(--navy); letter-spacing: 2px; margin-top: 14px; }
+    .hero-countdown { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; direction: ltr; }
+    .countdown-unit { text-align: center; min-width: 64px; }
+    .countdown-num { display: block; font-family: 'Heebo', sans-serif; font-size: 2rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .countdown-label { font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px; margin-top: 4px; }
+
+    /* ── Honey jar Easter egg ── */
+    .honey-hint {
+      position: fixed; bottom: 32px; right: 32px; z-index: 9998;
+      background: var(--paper); border: 1px solid var(--gold); border-radius: 8px;
+      padding: 10px 16px; font-size: 0.75rem; color: var(--text-secondary);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      opacity: 0; transform: translateY(10px); pointer-events: none;
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .honey-hint.visible { opacity: 1; transform: none; pointer-events: auto; }
+    .honey-overlay {
+      position: fixed; inset: 0; z-index: 99999;
+      background: rgba(11,15,26,0.85); display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.4s;
+    }
+    .honey-overlay.active { opacity: 1; pointer-events: auto; }
+    .honey-card {
+      background: var(--paper); border-radius: 16px; padding: 48px; text-align: center;
+      max-width: 420px; width: 90%; position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.3); border: 2px solid var(--gold);
+      transform: scale(0.8); transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .honey-overlay.active .honey-card { transform: scale(1); }
+    .honey-emoji { font-size: 4rem; margin-bottom: 16px; }
+    .honey-title { font-family: 'Heebo', sans-serif; font-size: 1.6rem; color: var(--navy); margin-bottom: 8px; }
+    .honey-text { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px; }
+    .honey-close { background: var(--navy); color: #fff; border: none; padding: 10px 28px; border-radius: 6px; cursor: pointer; font-family: 'Heebo', sans-serif; font-size: 0.85rem; font-weight: 600; }
+    .honey-close:hover { background: var(--gold); }
+
+    #confettiCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--paper); flex-direction: column; padding: 12px 16px; gap: 2px; border-bottom: 1px solid var(--rule-light); max-height: calc(100vh - 68px); overflow-y: auto; }
+      .nav-links.open { display: flex; }
+      .nav-mobile-btn { display: block; }
+      .ceo-photo-banner { max-width: 360px; }
+      .featured-project > div { grid-template-columns: 1fr !important; }
+      .lior-section { grid-template-columns: 1fr; }
+      .lior-img { max-width: 320px; margin: 0 auto; }
+      .employees-grid { grid-template-columns: repeat(2, 1fr); }
+      .completed-card { grid-template-columns: 1fr; height: auto; gap: 0; }
+      .completed-img { max-height: 240px; }
+      .completed-body { height: 198px; overflow: hidden; }
+      .hero-stats { flex-direction: column; border: none; background: rgba(255,255,255,0.8); }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 48px 0; }
+      .container { padding: 0 16px; }
+      .hero { min-height: auto; padding-bottom: 40px; }
+      .hero-content { padding: 0 24px 44px; }
+      .hero-img { margin-top: 28px !important; margin-bottom: 0 !important; width: 96%; }
+      .hero-fruit-row { margin-top: 14px; }
+      .countdown-card { padding: 20px 18px 16px; }
+      .hero-countdown { gap: 14px; }
+      .hero-badge { font-size: 0.62rem; letter-spacing: 3px; padding: 8px 16px; }
+      .hero-sub { font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 24px; }
+      .countdown-unit { min-width: 44px; }
+      .countdown-num { font-size: 1.3rem !important; }
+      .countdown-label { font-size: 0.65rem !important; }
+      .countdown-title { font-size: 0.65rem !important; }
+      .honey-hint { right: 12px; bottom: 16px; font-size: 0.68rem; padding: 8px 12px; }
+      .section-header, .cw-hero-banner { margin-bottom: 40px; }
+      .section-tag { font-size: 0.6rem; letter-spacing: 4px; }
+      .section-title { font-size: 1.5rem !important; }
+      .section-rule { width: 36px; margin-top: 14px; }
+      .ceo-photo-banner { margin-bottom: 32px; }
+      .ceo-mark { font-size: 5rem; }
+      .ceo-footer { flex-direction: column; align-items: stretch; gap: 8px; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-card { grid-template-columns: 110px 1fr; }
+      .project-img-wrap { min-height: 100px; padding: 10px; }
+      .project-img-wrap img { max-height: 80px; max-width: 95%; }
+      .project-card-body { padding: 16px 18px; }
+      .project-name { font-size: 0.92rem; }
+      .project-client-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+      .project-badge { margin-top: 0; }
+      .completed-body { padding: 20px 16px; }
+      .completed-name { font-size: 1.05rem; }
+      .completed-credits { font-size: 0.8rem; }
+      .births-grid { max-width: 360px; }
+      .birth-card { padding: 28px 18px; }
+      .birth-photo { width: 100px; height: 100px; }
+      .employees-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .emp-card { height: 460px; }
+      .emp-photo { height: 180px; }
+      .emp-body { padding: 12px 8px; }
+      .emp-body-name { font-size: 0.88rem; }
+      .emp-body-role { font-size: 0.54rem; padding: 3px 8px; white-space: nowrap; }
+      .emp-motto { font-size: 0.68rem; height: calc(0.68rem * 1.5 * 3 + 16px); }
+      .quiz-card { padding: 24px 16px; }
+      .quiz-question { font-size: 1.05rem; margin-bottom: 20px; }
+      .quiz-option { padding: 12px 16px; font-size: 0.85rem; }
+      .quiz-counter { font-size: 0.7rem; margin-bottom: 14px; }
+      .crossword-block { padding: 0; }
+      .cw-emoji-row { font-size: 1.2rem; letter-spacing: 6px; }
+      .social-link { font-size: 0.65rem; }
+      .poem-card { padding: 32px 18px; }
+      .poem-stanza { font-size: 0.92rem; line-height: 2; }
+      .poem-title { font-size: 1.3rem; }
+      .footer-blessing { font-size: 2.4rem; }
+      .friend-img { aspect-ratio: 4/3; }
+      .press-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 400px) {
+      .container { padding: 0 12px; }
+      .hero-content { padding: 0 18px 32px; }
+      .section { padding: 36px 0; }
+      .gallery-grid { gap: 8px; }
+      .section-title { font-size: 1.3rem !important; }
+      .quiz-card { padding: 18px 12px; }
+      .quiz-question { font-size: 0.95rem; }
+      .quiz-option { padding: 11px 12px; font-size: 0.82rem; }
+      .completed-card { gap: 0; }
+      .completed-img { max-height: 180px; }
+      .poem-card { padding: 24px 14px; }
+      .poem-card::after { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="חזרה למעלה">▲</button>
+
+<!-- Honey jar hint -->
+<div class="honey-hint" id="honeyHint">🍯 רמז: משהו מתוק מסתתר... חפשו אותו בלוגו!</div>
+
+<!-- Honey jar overlay -->
+<div class="honey-overlay" id="honeyOverlay">
+  <div class="honey-card">
+    <div class="honey-emoji">🍯✨</div>
+    <div class="honey-title">מצאתם את הדבש הנסתר!</div>
+    <div class="honey-text">יפה לכם... לא כל אחד מגיע עד לכאן.<br>גיליתם את הסוד המתוק של הניוזלטר &ndash; ועכשיו רשמית מגיעה לכם שנה טובה ומתוקה במיוחד!</div>
+    <button class="honey-close" onclick="document.getElementById('honeyOverlay').classList.remove('active')">סגירה</button>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="top">
+  <!-- Custom Rosh Hashana illustration (inline SVG — no external asset needed) -->
+  <svg class="hero-img" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="שנה טובה - ניוזלטר ראש השנה תשפ&quot;ז - פורן שרים">
+    <!-- soft sparkle dots -->
+    <g fill="#B8862E" opacity="0.3">
+      <circle cx="100" cy="30" r="3"/><circle cx="500" cy="20" r="2.5"/><circle cx="900" cy="60" r="3"/>
+    </g>
+
+    <!-- Center wordmark — true center, very generously spaced -->
+    <text x="500" y="90" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="900" font-size="84" letter-spacing="2" fill="var(--navy)">שָׁנָה טוֹבָה</text>
+    <text x="500" y="178" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="700" font-size="35" letter-spacing="3" fill="var(--gold-muted)">ראש השנה תשפ"ז</text>
+    <path d="M370,230 H630" stroke="var(--gold)" stroke-width="1.5" opacity="0.65"/>
+    <text x="500" y="301" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="600" font-size="35" letter-spacing="6" fill="var(--teal)">NEWSLETTER</text>
+    <text x="500" y="379" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="700" font-size="35" letter-spacing="2" fill="var(--navy)">פורן שרים</text>
+  </svg>
+
+  <img src="images/1-hero-fruit-row.png" alt="תפוח, דבש ורימון" class="hero-fruit-row">
+
+  <div class="hero-content">
+    <div class="countdown-card">
+      <div class="hero-countdown" id="heroCountdown">
+        <div class="countdown-unit"><span class="countdown-num" id="cdDays">--</span><span class="countdown-label">ימים</span></div>
+        <div class="countdown-unit"><span class="countdown-num" id="cdHours">--</span><span class="countdown-label">שעות</span></div>
+        <div class="countdown-unit"><span class="countdown-num" id="cdMins">--</span><span class="countdown-label">דקות</span></div>
+        <div class="countdown-unit"><span class="countdown-num" id="cdSecs">--</span><span class="countdown-label">שניות</span></div>
+      </div>
+      <div class="countdown-title">עד לכניסת החג</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <img src="images/logo.png" alt="פורן שרים" class="nav-logo" onerror="this.onerror=null;this.src='https://poran-shrem.com/wp-content/uploads/2024/02/logo.png'">
+    <button class="nav-mobile-btn" id="navToggle" aria-label="תפריט"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#ceo">מילה מההנהלה</a></li>
+      <li><a href="#projects">מהשטח</a></li>
+      <li><a href="#births">האנשים שלנו</a></li>
+      <li><a href="#updates">מה חדש</a></li>
+      <li><a href="#gallery">לקינוח</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══ CEO ══ -->
+<section class="section" id="ceo">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">דברי המנכ"לים</span>
+      <h2 class="section-title">פותחים שנה חדשה</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="ceo-photo-banner reveal">
+      <img src="images/2-ceo-photo.png" alt="שלומי ועמי" class="ceo-photo" onerror="this.src='images/placeholder.svg'">
+    </div>
+    <div class="ceo-text-area reveal">
+      <span class="ceo-mark">"</span>
+      <div class="ceo-body">
+        <p>משפחת פורן שרים היקרה,</p>
+        <p>לקראת ראש השנה, אנו עוצרים לרגע את מרוץ היומיום ומביטים על השנה שחלפה &ndash; שנה של אתגרים, הישגים, שינויים משמעותיים ובעיקר של אנשים טובים שהמשיכו להוביל, ליצור ולהשפיע גם בתקופות מורכבות במיוחד. ראש השנה מסמל עבור כולנו הזדמנות להתחדשות. זהו הזמן לסכם את העבר, להודות על הדרך שעשינו, ולהביט קדימה בתקווה, באחריות ובשאיפה להמשיך לצמוח ולהתפתח.</p>
+        <p>אחד הנושאים המרכזיים שמלווים אותנו בשנה האחרונה הוא המשך מהפכת הבינה המלאכותית. אם בעבר עסקנו בעיקר בלמידה ובהיכרות עם הכלים החדשים, הרי שהיום אנו נמצאים בשלב של יישום והטמעה בפועל. במהלך השנה שילבנו מגוון כלים טכנולוגיים חדשים בעבודת החברה, ואנו ממשיכים לבחון כיצד ניתן לרתום את הטכנולוגיה לטובת שיפור תהליכים, חיזוק יכולות הניהול, קיצור זמני ביצוע ושיפור השירות ללקוחותינו. עם זאת, הצלחת המהלך אינה תלויה רק בטכנולוגיה עצמה &ndash; היא תלויה בכולנו. לכן אנו מבקשים להמשיך ולעודד את שיתוף הפעולה עם תחום החדשנות והטכנולוגיה, להעלות רעיונות, להציע יישומים חדשים, לשתף באתגרים ולהיות שותפים פעילים בעיצוב הדרך שבה תיראה החברה שלנו בשנים הבאות. החדשנות איננה אחריות של אדם אחד או של מחלקה אחת &ndash; היא תרבות ארגונית שכולנו חלק ממנה.</p>
+        <p>לצד ההתקדמות הטכנולוגית, אנו ממשיכים להאמין כי הבסיס להצלחתנו היה ויישאר תמיד המקצועיות ההנדסית, הניסיון המצטבר, החשיבה הביקורתית והמחויבות לאיכות. הטכנולוגיה מעניקה לנו כלים חדשים ועוצמתיים, אך היא איננה מחליפה את הידע, האחריות ושיקול הדעת המקצועי שמאפיינים את אנשי פורן שרים כבר שנים רבות.</p>
+        <p>ברמה העסקית, השנה האחרונה סימנה עבורנו ציון דרך משמעותי עם הזכייה בפרויקט שיבא נגב, בשיתוף חברת האחים מרגולין. מדובר בפרויקט לאומי בעל חשיבות עצומה למדינת ישראל, ואנו גאים על ההזדמנות לקחת בו חלק. זכייה זו מהווה הבעת אמון ביכולות המקצועיות של החברה ומחזקת את שאיפתנו להמשיך ולהתמודד על פרויקטים לאומיים נוספים, אשר ישפיעו על עתידה של המדינה ועל איכות החיים של אזרחיה. במקביל, אנו ממשיכים להרחיב את פעילות החברה בתחום המגדלים והבנייה לגובה &ndash; תחום המציב רף מקצועי גבוה במיוחד ודורש מומחיות, ניסיון ויכולת ניהול מורכבת. אנו משקיעים משאבים, מפתחים ידע ומגייסים אנשי מקצוע איכותיים כדי לבסס את מעמדנו גם בתחום זה ולהמשיך להרחיב את סל השירותים שאנו מעניקים ללקוחותינו.</p>
+        <p>השנה שחלפה עמדה גם בסימן מלחמת "שאגת הארי", שהמחישה פעם נוספת עד כמה המציאות הישראלית יכולה להשתנות בן רגע. גם אם נדמה שהשגרה חזרה לחיינו, כולנו יודעים שהמצב עדיין מורכב ומלא באי-ודאות. בתוך המציאות הזו גילינו שוב את החוסן, האחריות והערבות ההדדית שמאפיינים את החברה שלנו. בהזדמנות זו אנו רוצים להביע הערכה מיוחדת לאנשי ונשות המילואים שלנו. פעם נוספת נדרשתם לעזוב משפחות, עבודה ושגרה ולהתייצב במקום שבו המדינה זקוקה לכם. אתם מייצגים את הערכים היפים ביותר של החברה הישראלית, ואנו גאים בכם וגאים במשפחותיכם, שנושאות יחד איתכם בנטל ומאפשרות את השירות המשמעותי הזה.</p>
+        <p>ראש השנה הוא גם הזדמנות לומר תודה. תודה לכל אחת ואחד מכם על המחויבות, המקצועיות, היצירתיות, רוח הצוות והנכונות לעשות תמיד את הצעד הנוסף. תודה לבני ובנות הזוג ולבני המשפחה, שמלווים אתכם לאורך הדרך ומהווים חלק בלתי נפרד מההצלחה המשותפת שלנו.</p>
+        <p>אנו נכנסים לשנה החדשה עם הרבה תקווה, אך גם עם הרבה אחריות. תקווה להמשך צמיחה, להתפתחות מקצועית, לחדשנות, להצלחות עסקיות ולהרחבת פעילות החברה. תקווה לשקט ולביטחון למדינת ישראל. ובעיקר תקווה שנמשיך לשמור על מה שהפך את פורן שרים למה שהיא: אנשים מצוינים, ערכים חזקים ואמונה בדרך.</p>
+        <p>מאחלים לכם ולבני משפחותיכם שנה טובה ומתוקה, שנה של בריאות, הצלחה, הגשמה אישית ומקצועית, שנה של יציבות, צמיחה ובשורות טובות.</p>
+      </div>
+      <div class="ceo-footer">
+        <div>
+          <div class="ceo-sign">שלכם,<br>שלומי שרים ועמי פורן</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LIOR ══ -->
+<section class="section section--alt" id="lior">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">דבר הארה לחג</span>
+      <h2 class="section-title">"שנהיה לראש ולא לזנב"</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="lior-section reveal">
+      <div>
+        <img src="images/3-lior-fish.png" alt="ראש השנה" class="lior-img" onerror="this.src='images/placeholder.svg'">
+      </div>
+      <div class="lior-body">
+        <p>בליל ראש השנה, נוהגים לקיים את סדר הסימנים בו אנו אוכלים לפני הסעודה המרכזית ואומרים ברכות לשנה החדשה: תפוח בדבש &ndash; "שתתחדש עלינו שנה טובה ומתוקה", רימון &ndash; "שירבו זכויותינו כרימון", תמר &ndash; "שיתמו שונאינו וכל מבקשי רעתנו", ועוד סימנים רבים, וביניהם גם נוהגים לקחת ראש כבש או ראש של דג ואומרים לסימנא מילתא "יהי רצון... שנהיה לראש ולא לזנב".</p>
+        <p>המקור לברכה זו כתוב בספר דברים בפרשת בחוקותי: "וּנְתָנְךָ ה' לְרֹאשׁ וְלֹא לְזָנָב וְהָיִיתָ רַק לְמַעְלָה"...</p>
+        <p>עיקר ברכה זו היא הזכות להיות הראש, להיות המנהיג, מתווה הדרך, מוביל, מחליט, מקדם, לשאוף &ndash; ולא להיות זנב, מי שהולך אחרי התלם, מושפע ונמשך אחר מעשיהם של אחרים. להיות ראש אומר להיות דוגמה ומופת בדרך, להיות עם דעה מוצקה וברורה, הגדרת מטרות, ותוכנית מוגדרת לאן הוא הולך, כיצד הוא הולך להשפיע טוב, להוביל, וכמובן לבדוק ולבקר את עצמו ולהשתפר לאורך הדרך.</p>
+        <p>להיות ראש זו ברכה, אך צריך תמיד לדאוג שהראש מסתכל תמיד למעלה, לא לתת לקשיים לגרום לך להוריד את הראש, אלא ללמוד מהם ולגדול.</p>
+        <p>בימים אלו לקראת ראש השנה, זו הזדמנות של כל אחד מאיתנו לחשבון נפש, ביחוד בימים שנותרו בחודש אלול &ndash; שמשמעותו מלשון "יאללון", שהוא בתרגום ארמי לשון "ריגול וחיפוש אחר מעשיו". לחשוב על הדברים שלא הספקנו השנה, שלא הצלחנו לממש, לחשוב כיצד לתקן דברים שעדיין לא הספקנו, להתפייס ולמחול.</p>
+        <p>להחליט השנה "להיות לראש ולא לזנב", להיות מנהיגים בכל מקום בו אנו נמצאים, לעשות טוב לעצמנו, למשפחה, בעבודה ובכל מקום שידינו מגעת אליו.</p>
+        <p>מאחל לנו שנזכה לשנה של בריאות, שגשוג, הצלחה, אהבה ונתינה.</p>
+        <div class="lior-sign">שנה טובה ומתוקה!!<br>ליאור אוחנה</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NEW PROJECTS ══ -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">יוצאים לדרך</span>
+      <h2 class="section-title">פרויקטים חדשים</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:640px;margin-left:auto;margin-right:auto;line-height:2;">בחודשים האחרונים יצאו לדרך לא מעט פרויקטים חדשים &ndash; הנה הצצה למה שמעסיק אותנו בשטח.</p>
+    </div>
+    <div class="projects-grid reveal stagger">
+
+      <div class="project-card project-card--featured">
+        <div class="project-img-wrap"><img src="images/4-projects-mitzpe-leom.png" alt="מצפה הלאום" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">מאי</span>
+          <div class="project-name">מצפה הלאום</div>
+          <div class="project-client-row"><div class="project-client">מנרב</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+      <div class="projects-divider" aria-hidden="true"></div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-zvulun-education.png" alt="ממ&quot;דים למוסדות חינוך זבולון" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">יוני</span>
+          <div class="project-name">ממ"דים למוסדות חינוך</div>
+          <div class="project-client-row"><div class="project-client">מועצה אזורית זבולון</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-police.png" alt="פרויקטי בינוי שוטפים במשטרה" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">יוני</span>
+          <div class="project-name">פרויקטי בינוי שוטפים במשטרה</div>
+          <div class="project-client-row"><div class="project-client">משטרת ישראל</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-soroka.png" alt="תוספת 2 קומות מכלול דרומי סורוקה" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">יוני</span>
+          <div class="project-name">תוספת 2 קומות &ndash; מכלול דרומי סורוקה</div>
+          <div class="project-client-row"><div class="project-client">קופת חולים כללית</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-sapir.png" alt="פקולטה לטכנולוגיות מתקדמות ספיר" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">יוני</span>
+          <div class="project-name">פקולטה לטכנולוגיות מתקדמות</div>
+          <div class="project-client-row"><div class="project-client">מכללת ספיר</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+      <div class="projects-divider" aria-hidden="true"></div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-ramat-yochanan.png" alt="גני ילדים רמת יוחנן" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">יולי</span>
+          <div class="project-name">גני ילדים רמת יוחנן</div>
+          <div class="project-client-row"><div class="project-client">חכ"ל זבולון</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-givat-alonim.png" alt="מעון יום גבעת אלונים" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">יולי</span>
+          <div class="project-name">מעון יום גבעת אלונים</div>
+          <div class="project-client-row"><div class="project-client">עיריית גבעת שמואל</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-police.png" alt="תחנת עוז ירושלים" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">יולי</span>
+          <div class="project-name">תחנת עוז &ndash; ירושלים</div>
+          <div class="project-client-row"><div class="project-client">משטרת ישראל</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-police.png" alt="תחנת ראש העין" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">יולי</span>
+          <div class="project-name">תחנת ראש העין</div>
+          <div class="project-client-row"><div class="project-client">משטרת ישראל</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+      <div class="projects-divider" aria-hidden="true"></div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-lod-library.png" alt="ספריה עירונית לוד" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">אוגוסט</span>
+          <div class="project-name">ספריה עירונית</div>
+          <div class="project-client-row"><div class="project-client">חכ"ל לוד</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-lod-culture.png" alt="היכל תרבות לוד" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">אוגוסט</span>
+          <div class="project-name">היכל תרבות</div>
+          <div class="project-client-row"><div class="project-client">חכ"ל לוד</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-tel-nof.png" alt="שירותי פיקוח תל נוף" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">אוגוסט</span>
+          <div class="project-name">פיקוח במחנה תל נוף</div>
+          <div class="project-client-row"><div class="project-client">משרד הביטחון</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-bgu.png" alt="מרכז כנסים בן גוריון" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">אוגוסט</span>
+          <div class="project-name">מרכז כנסים חדש</div>
+          <div class="project-client-row"><div class="project-client">אוניברסיטת בן גוריון</div><span class="project-badge" style="visibility:hidden">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-ottawa.png" alt="שגרירות ישראל בקנדה" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">אוגוסט</span>
+          <div class="project-name">שגרירות ישראל בקנדה (אוטווה)</div>
+          <div class="project-client-row"><div class="project-client">משרד החוץ</div><span class="project-badge">בינלאומי</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-wrap"><img src="images/4-projects-addis.png" alt="שגרירות ישראל באתיופיה" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="project-card-body">
+          <span class="project-month">אוגוסט</span>
+          <div class="project-name">שגרירות ישראל באתיופיה (אדיס אבבה)</div>
+          <div class="project-client-row"><div class="project-client">משרד החוץ</div><span class="project-badge">בינלאומי</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMPLETED ══ -->
+<section class="section section--alt" id="completed">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">קו הסיום</span>
+      <h2 class="section-title">פרויקטים שהושלמו</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:720px;margin-left:auto;margin-right:auto;line-height:2;">אחרי תקופה ארוכה של עבודה, תכנון וביצוע, יש סיפוק מיוחד בלראות את כל החלקים מתחברים לתוצאה אחת.</p>
+    </div>
+    <div class="completed-list">
+
+      <div class="completed-card reveal">
+        <img src="images/5-completed-sports-hall.png" alt="אולם ספורט גבעת שמואל" class="completed-img" onerror="this.src='images/placeholder.svg'">
+        <div class="completed-body">
+          <div class="completed-status"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> הושלם</div>
+          <div class="completed-name">אולם ספורט בגבעת שמואל</div>
+          <div class="completed-credits">
+            <strong>תודה לכל מי שלקח חלק בפרויקט &ndash;</strong><br>
+            עינת&nbsp;רוזן, מיכאל&nbsp;נפתלי, דורון&nbsp;בריה, ולריה&nbsp;סקליאר ונוי&nbsp;משריקי.
+          </div>
+        </div>
+      </div>
+
+      <div class="completed-card reveal">
+        <img src="images/5-completed-beit-hanivcharot.png" alt="בית הנבחרות" class="completed-img" onerror="this.src='images/placeholder.svg'">
+        <div class="completed-body">
+          <div class="completed-status"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> הושלם</div>
+          <div class="completed-name">פרויקט בית הנבחרות</div>
+          <div class="completed-credits">
+            <strong>תודה לכל מי שלקח חלק בפרויקט &ndash;</strong><br>
+            אלמוג&nbsp;פורטל ואסף&nbsp;שלמה.
+          </div>
+        </div>
+      </div>
+
+      <div class="completed-card reveal">
+        <img src="images/5-completed-road-471.png" alt="כביש 471 מערבי" class="completed-img" onerror="this.src='images/placeholder.svg'">
+        <div class="completed-body">
+          <div class="completed-status"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> הושלם</div>
+          <div class="completed-name">כביש 471 מערבי</div>
+          <div class="completed-credits">
+            <strong>תודה לכל מי שלקח חלק בפרויקט &ndash;</strong><br>
+            יפעת&nbsp;פדן&nbsp;חממה, עמית&nbsp;וגנר, שלומי&nbsp;קוך, יוני&nbsp;בונפיל, דבורי&nbsp;קופרמן ומירי&nbsp;אשלג.
+          </div>
+        </div>
+      </div>
+
+      <div class="completed-card reveal">
+        <img src="images/5-completed-matam-kesem.png" alt="מת&quot;צ קסם - דרך ארץ" class="completed-img" onerror="this.src='images/placeholder.svg'">
+        <div class="completed-body">
+          <div class="completed-status"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> הושלם</div>
+          <div class="completed-name">מת"צ קסם</div>
+          <div class="completed-credits">
+            <strong>תודה לכל מי שלקח חלק בפרויקט &ndash;</strong><br>
+            יפעת&nbsp;פדן&nbsp;חממה, שלומי&nbsp;קוך, תומר&nbsp;דורי, יונתן&nbsp;בונפיל ודבורי&nbsp;קופרמן.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ BIRTHS ══ -->
+<section class="section" id="births">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">מזל טוב</span>
+      <h2 class="section-title">המשפחה מתרחבת</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:560px;margin-left:auto;margin-right:auto;line-height:2;">המשפחה התרחבה ואנחנו שמחים לברך על הצטרפותם של תינוקות חדשים למשפחת&nbsp;פורן&nbsp;שרים.<br>מאחלים להורים הרבה אושר, בריאות ורגעים מרגשים של התחלה חדשה.</p>
+    </div>
+    <div class="births-grid">
+
+      <div class="birth-card reveal">
+        <div class="birth-photo">
+          <img src="images/6-births-hararis.png" alt="הבן של גל ורועי" onerror="this.src='images/placeholder.svg'">
+        </div>
+        <div class="birth-parent">גל ורועי הררי</div>
+        <div class="birth-baby">השם יעודכן בקרוב (בן)</div>
+      </div>
+
+      <div class="birth-card reveal">
+        <div class="birth-photo">
+          <img src="images/6-births-haylee.png" alt="היילי" onerror="this.src='images/placeholder.svg'">
+        </div>
+        <div class="birth-parent">מלני ואלעד חגי</div>
+        <div class="birth-baby">היילי (בת)</div>
+      </div>
+
+      <div class="birth-card reveal">
+        <div class="birth-photo">
+          <img src="images/6-births-arbel.png" alt="ארבל" onerror="this.src='images/placeholder.svg'">
+        </div>
+        <div class="birth-parent">בר ומאיר יונגסטר</div>
+        <div class="birth-baby">ארבל (בת)</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ WEDDINGS & ENGAGEMENTS ══ -->
+<section class="section section--alt" id="weddings">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">חוגגים אהבה</span>
+      <h2 class="section-title">חתונות ואירוסין</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:560px;margin-left:auto;margin-right:auto;line-height:2;">קולולולו... סיבה למסיבה! השנה שמחנו לחגוג יחד כמה רגעים מרגשים ומשמחים במיוחד.</p>
+    </div>
+    <div class="births-grid">
+
+      <div class="birth-card reveal">
+        <img src="images/7-weddings-rings.png" alt="טבעות נישואין" class="birth-icon" style="width:96px;height:auto;margin:0 auto 12px;display:block;">
+        <div class="birth-parent">ירין וטל בן ארי</div>
+        <div class="birth-baby">מזל טוב לרגל נישואיכם</div>
+        <div class="birth-blessing">מאחלים לכם חיים משותפים מלאי אהבה, אושר ורגעים יפים.</div>
+      </div>
+
+      <div class="birth-card reveal">
+        <img src="images/7-weddings-rings.png" alt="טבעות אירוסין" class="birth-icon" style="width:96px;height:auto;margin:0 auto 12px;display:block;">
+        <div class="birth-parent">גיא כספי ובת זוגו</div>
+        <div class="birth-baby">מזל טוב לרגל אירוסיכם</div>
+        <div class="birth-blessing">מאחלים לכם דרך משותפת מלאה באהבה, בשמחה ובהתרגשות.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ EMPLOYEES ══ -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">הצטרפו למשפחה</span>
+      <h2 class="section-title">עובדים חדשים בחברה</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:680px;margin-left:auto;margin-right:auto;line-height:2;">מאחורי כל תפקיד חדש יש גם אדם חדש להכיר &ndash; אז הנה היכרות קצת יותר אישית עם המצטרפים שלנו.</p>
+    </div>
+    <div class="employees-grid">
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-ohad-cohen.png" alt="אוהד כהן" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">אוהד כהן</div><span class="emp-body-role">מנהל צוות פיקוח &ndash; תל נוף</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">מהנדס אזרחי</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">טניס, שחיה, בישול, גינון</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"להיות בן אדם לפני הכל, ואחרי 7.10 &ndash; חייה כאילו אין מחר"</div></div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-eyal-perianti.png" alt="אייל פריאנטי" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">אייל פריאנטי</div></div>
+          <div class="emp-pending">מחכים לפרטים מאייל!</div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-guy-israeli.png" alt="גיא ישראלי" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">גיא ישראלי</div><span class="emp-body-role">מנהל פרויקטים &ndash; משטרת ישראל</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">בגרות מלאה</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">ספורט, טיולים וקולינריה</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"הצלחה היא דרך ולא יעד"</div></div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-gal-holtzman.png" alt="גל הולצמן" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">גל הולצמן</div><span class="emp-body-role">מנהל פרויקטים</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">מהנדס אזרחי</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">כדור עף, כדורעף חופים ופאדל</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"קשה להיות צנוע כשאתה הטוב ביותר"</div></div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-maor-castro.png" alt="מאור קסטרו" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">מאור קסטרו</div><span class="emp-body-role">מנהל פרויקטים</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">מהנדס אזרחי</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">טיולים בטבע ונחלים, כדורגל</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"עם חיוך, כל אתגר נהיה הרבה יותר קל"</div></div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-moti-refaeli.png" alt="מוטי רפאלי" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">מוטי רפאלי</div><span class="emp-body-role">מנהל BIM ומתאם מערכות</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">הנדסאי אדריכלות</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">כדורגל, ריצה, קריאה ואוכל</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"כשדלת אחת נסגרת &ndash; תמיד נפתחת אחרת"</div></div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-miriam-eshel.png" alt="מרים אשלג" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">מרים אשלג</div><span class="emp-body-role">מזכירת צוות תשתיות</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">הוראה בכירה</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">לנגן ולכתוב</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"אם עשית את הכי טוב שיכולת בסיטואציה &ndash; עשית את שלך"</div></div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-matan-machlouf.png" alt="מתן מחלוף" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">מתן מחלוף</div><span class="emp-body-role">מנהל פרויקטים</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">מהנדס בניין</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">כדורסל, אוכל טוב</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"איזון זה המפתח להכל"</div></div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-anat-tzang.png" alt="ענת צנג" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">ענת צנג</div><span class="emp-body-role">מנהלת פרויקטים</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">הנדסאית אדריכלות</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">פסנתר וגיטרה, רכיבת אופניים</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"להאמין בדרך. לבחור נכון. להתקדם תמיד."</div></div>
+        </div>
+      </div>
+
+      <div class="emp-card reveal">
+        <div class="emp-photo"><img src="images/8-team-tzipi-wilamovsky.png" alt="ציפי וילמובסקי" onerror="this.src='images/placeholder.svg'"></div>
+        <div class="emp-body">
+          <div class="emp-body-top"><div class="emp-body-name">ציפי וילמובסקי</div><span class="emp-body-role">מזכירת מנכ"ל</span></div>
+          <div class="emp-body-middle">
+            <div class="emp-info-row"><span class="emp-label">השכלה</span><span class="emp-value">הנדסאית קולנוע וצילום, תיווך נדל"ן</span></div>
+            <div class="emp-info-row"><span class="emp-label">תחביבים</span><span class="emp-value">שירה ומוזיקה, ספורט, לפנק את הכלבה</span></div>
+          </div>
+          <div class="emp-motto-row"><span class="emp-label">מוטו בחיים</span><div class="emp-motto">"תמיד להסתכל על חצי הכוס המלאה"</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPOTLIGHT: אחת משלנו ══ -->
+<section class="section section--alt" id="spotlight">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">אחת משלנו</span>
+      <h2 class="section-title">קהילת "אחת אחת"</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:900px;margin-left:auto;margin-right:auto;line-height:2;">קהילת "אחת אחת" מאגדת נשים מנהלות ובכירות בענף הבנייה והתשתיות, ויוצרת מרחב לחיבור, שיתוף ידע וניסיון וקידום נשים בענף.</p>
+    </div>
+
+    <div class="spotlight lior-section reveal">
+      <div>
+        <img src="images/9-spotlight-einat-rozen.png" alt="עינת רוזן" class="lior-img spotlight-photo" onerror="this.src='images/placeholder.svg'">
+      </div>
+      <div class="lior-body">
+        <div style="font-weight:800;font-size:1.15rem;color:var(--navy);">עינת רוזן</div>
+        <span class="spotlight-role">סמנכ"לית | פורן שרים</span>
+        <h4>נעים להכיר</h4>
+        <p>מהנדסת אזרחית בוגרת הטכניון, סא"ל (במיל'), ומי שחתומה על ניהול מגה־פרויקטים לאומיים ב-35 השנים האחרונות.</p>
+        <h4>התחנות שבדרך</h4>
+        <p>הרומן של עינת עם ענף הבנייה התחיל כבר בתיכון במגמת הנדסת בניין. משם המשיכה למרכז בינוי בצה"ל כמנהלת פרויקטים &ndash; תפקיד שהיה חריג לחלוטין לבנות באותה תקופה. המסלול המשיך לקורס קצינים ולתואר בטכניון. במהלך 25 שנות שירות הגיעה לדרגת סא"ל. בדרך היא הספיקה לעבוד מול חיל ההנדסה האמריקאי (COE), מה שחשף אותה למתודולוגיות עבודה בינלאומיות שהקדימו את זמנן בארץ.</p>
+        <h4>העשייה היום</h4>
+        <p>כסמנכ"לית בפורן שרים, עינת מנווטת את תחום הבינוי &ndash; ממוסדות רפואה ופרויקטים ביטחוניים ועד תשתיות ו-Data Centers. היא מובילה פרויקטים משלב החזון והתכנון ועד למסירה בשטח, תוך שהיא משקיעה חלק ניכר מזמנה בחניכה של דור המהנדסים הצעיר.</p>
+        <h4>החותם האישי</h4>
+        <p>התחנה שהיא הכי גאה בה: תפקידה האחרון בצה"ל &ndash; ראש ענף צה"ל לנגב. עינת הייתה שותפה מרכזית למהלך הלאומי של העברת הבסיסים דרומה, הקימה מערכי ניהול מאפס והובילה פרויקטים בהיקף של מעל 500,000 מ"ר: קריית ההדרכה, התקשוב והמודיעין. לצד אלו, היא גאה במיוחד בפרויקט משכן האוספים ב"יד ושם", פרויקט שדרש שילוב נדיר בין מורכבות הנדסית לבין רגישות אנושית עמוקה לשימור זיכרון השואה.</p>
+        <p>מעבר לעבודה, עינת היא אמא לשלוש בנות וסבתא לשני נכדים! בזמנה הפנוי תמצאו אותה קוראת, מטיילת בעולם ושומרת באדיקות על קשרים עם חברים שליוו אותה לאורך כל תחנות הקריירה.</p>
+        <h4>"אחת אחת" בשבילי</h4>
+        <div class="spotlight-quote">"חשוב לי להיות חלק מקהילה שמתווה את הדרך לנשים צעירות בענף. אני מאמינה שלנשים יש יתרון בראייה מערכתית וניהולית רחבה, וקהילה כזו מאפשרת שיתוף ידע, חיזוק של הדור הבא ויצירת רשת מקצועית תומכת."</div>
+        <h4>טיפ למתחילות</h4>
+        <div class="spotlight-quote">"אל תפחדו מענף שנחשב גברי &ndash; בסופו של דבר נבחנים לפי מקצועיות, אחריות ויכולת. תהיו יסודיות, תלמדו את השטח ואל תחששו לקחת אחריות ולהציג דעה. הסיפוק כשרואים בסוף את מה שבנית הוא אדיר."</div>
+        <div class="lior-sign">עינת, תודה על השיתוף ותודה שאת חלק מהקהילה שלנו!</div>
+      </div>
+    </div>
+
+    <div class="spotlight lior-section reveal" style="margin-top:64px;">
+      <div>
+        <img src="images/9-spotlight-yifat-paden.png" alt="יפעת פדן חממה" class="lior-img spotlight-photo" onerror="this.src='images/placeholder.svg'">
+      </div>
+      <div class="lior-body">
+        <div style="font-weight:800;font-size:1.15rem;color:var(--navy);">יפעת פדן חממה</div>
+        <span class="spotlight-role">מנהלת תחום תשתיות | פורן שרים</span>
+        <h4>נעים להכיר</h4>
+        <p>יפעת היא מהנדסת אזרחית (בוגרת הטכניון) שאוהבת בעיקר להבין איך פרויקטים עובדים, איך אנשים עובדים ואיך מחברים בין הפרטים הקטנים לראייה המערכתית כדי שדברים באמת יקרו בשטח. לאורך הקריירה צברה ניסיון רב־זוויתי בתכנון, לו"ז, אינטגרציה הנדסית, מכרזים וניהול פרויקטים.</p>
+        <h4>התחנות שבדרך</h4>
+        <p>את הקריירה התחילה במשרד קונסטרוקציה, אך מהר מאוד הבינה שזה פשוט לא המקום בו היא רוצה להישאר. נקודת המפנה הגיעה כשראתה מודעה של חברה בינלאומית שחיפשה מהנדסת לוחות זמנים להקמת מפעל אינטל. ללא ניסיון קודם בתחום, היא התקשרה בעצמה למנהל, ביקשה הזדמנות והבטיחה ללמוד מהר.</p>
+        <p>שנה בלבד לאחר מכן התבקשה לעבור לאנגליה, שם עבדה במשך שלוש שנים וחצי כמנהלת לוחות זמנים בפרויקטים בינלאומיים. כשחזרה לארץ עבדה בנת"ע באינטגרציה הנדסית של קווי הרכבת הקלה (ושם גם הכירה את בעלה), ניהלה את מחלקת המכרזים בחטיבת התשתיות של סולל בונה, ולאחר לידת בתה הבכורה לקחה כמה חודשים של עצירה ("כפכפים, קפה ובטלה &ndash; שהיו בדיעבד החלטה ניהולית מעולה"), עד שהגיעה לפורן שרים.</p>
+        <h4>העשייה היום</h4>
+        <p>כמעט 7 שנים שיפעת מנהלת את תחום התשתיות בפורן שרים. היא מובילה פרויקטים בתכנון ובביצוע בתחומי התחבורה &ndash; כבישים, מסילות ורכבות, משלב הייזום ועד המסירה ופתיחתם לתנועה. מבחינתה, ניהול נכון של התכנון מונע כיבוי שריפות בביצוע, והחלק המרגש ביותר בעבודה הוא לראות רעיון שהיה שרטוט על הנייר הופך לכביש או רכבת שאנשים באמת נוסעים בהם.</p>
+        <h4>החותם האישי</h4>
+        <p>תעוזה ויוזמה: כמעט כל תפקיד משמעותי בקריירה שלה התחיל במשפט "מעולם לא עשיתי את זה קודם". הרמת הטלפון למנהל באינטל שינתה את המסלול המקצועי שלה.</p>
+        <p>להעביר את האמון הלאה ולבנות סטנדרט מקצועי: כמי שקיבלה הזדמנויות גם ללא ניסיון קודם, יפעת משקיעה בצוות שלה, מזהה פוטנציאל ונותנת אחריות אמיתית. לצד זה היא גאה במיוחד בסטנדרט המקצועי של הצוות &ndash; ירידה לפרטים, חשיבה כמה צעדים קדימה ועבודה שאנשים יכולים לסמוך עליה.</p>
+        <p>מעבר לעבודה, יפעת היא אמא לשלושה ילדים (בת 9, בן 2.5 ובת 2), כך שניהול סיכונים, תעדוף ומשא ומתן מיושמים אצלה מדי יום גם בבית. מבחינתה, הצלחה היא גם לסיים יום עמוס ומלא אחריות עם חיוך.</p>
+        <h4>"אחת אחת" בשבילי</h4>
+        <div class="spotlight-quote">"בתחילת הדרך למדתי לא מעט לבד. עם השנים הבנתי שאין תחליף לאנשים מנוסים שאפשר להתייעץ איתם. 'אחת אחת' היא קהילה שמאפשרת ללמוד, לפתוח דלתות, לשתף מניסיון ולהיות הכתובת שמישהי אחרת מחפשת בתחילת הדרך שלה."</div>
+        <h4>טיפ למתחילות</h4>
+        <div class="spotlight-quote">"אל תחליטו בשביל אחרים שאתן עדיין לא מוכנות. אל תחכו שדלתות ייפתחו &ndash; לפעמים צריך פשוט לדפוק עליהן. חפשו מנטור/ית שיעזרו לכן לראות דברים מזווית אחרת, ויאמינו בכן רגע לפני שאתן מאמינות בעצמכן."</div>
+        <div class="lior-sign">יפעת, תודה על השיתוף ותודה שאת חלק מהקהילה שלנו!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ UPDATES ══ -->
+<section class="section" id="updates">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">שווה לציין</span>
+      <h2 class="section-title">מה קורה בחברה</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:560px;margin-left:auto;margin-right:auto;line-height:2;">בין הפרויקטים והמשימות, קורים אצלנו עוד כמה דברים שכדאי להכיר.</p>
+    </div>
+    <div style="display:grid;gap:24px;max-width:800px;margin:0 auto;">
+
+      <div class="reveal" style="display:grid;grid-template-columns:100px 1fr;gap:20px;align-items:center;border-radius:10px;box-shadow:0 2px 12px rgba(25,53,89,0.08);background:var(--paper);padding:24px;">
+        <div style="width:100px;aspect-ratio:1;border-radius:6px;overflow:hidden;border:1px solid var(--brand-gray);flex-shrink:0;">
+          <img src="images/10-updates-yifat-check.png" alt="צוות תשתיות" style="width:100%;height:100%;object-fit:contain;" onerror="this.src='images/placeholder.svg'">
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:4px;">זכייה בתחרות "קרב הפוסטים" &ndash; צוות תשתיות</div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.85;">מזל טוב לצוות התשתיות בראשות יפעת פדן חממה על הזכייה בתחרות קרב הפוסטים!<br>גאים בכם ובעשייה היפה שלכם ברשת.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FRIEND BRINGS FRIEND ══ -->
+<section class="section section--alt" id="friend">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">גדלים יחד</span>
+      <h2 class="section-title">חבר מביא חבר</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="friend-section reveal">
+      <p style="max-width:640px;margin:0 auto;font-size:15.5px;color:var(--text-secondary);line-height:2;text-align:center;">אנו מזמינים אתכם לקחת חלק בהרחבת הצוות ולסייע בגיוס עובדים איכותיים לחברה. אתם מכירים את האנשים הטובים ביותר בתחום.<br>חברים, קולגות ואנשי מקצוע מצוינים שיכולים להשתלב אצלנו. זו הזדמנות להשפיע על מי מצטרף אלינו, לחזק את הצוות ולהיות חלק מהצמיחה המשותפת של החברה.</p>
+      <a href="https://poran-shrem.com/%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94/" target="_blank" style="display:block;margin-top:28px;">
+        <img src="images/11-friend-hiring.png" alt="דרוש.ה - פורן שרים מרחיבה את הצוות" class="friend-img" onerror="this.src='images/placeholder.svg'">
+      </a>
+      <a href="https://poran-shrem.com/%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94/" target="_blank" class="text-link" style="margin-top:24px;display:inline-block;font-weight:600;font-size:0.95rem;">לדף הקריירה שלנו</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MILUIM ══ -->
+<section class="section" id="miluim" style="background:linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" style="color:#fff;border-color:rgba(255,255,255,0.3);">גאים בכם</span>
+      <h2 class="section-title" style="color:#fff;">תודה רבה למילואימניקים שלנו</h2>
+      <div class="section-rule" style="background:rgba(255,255,255,0.4);"></div>
+      <p style="margin-top:20px;color:rgba(255,255,255,0.9);font-size:15.5px;max-width:600px;margin-left:auto;margin-right:auto;line-height:2;">תודה גדולה לכל המילואימניקים ולבני ובנות משפחותיהם על ההתגייסות, המסירות והתרומה המשמעותית. מעריכים מאוד אתכם וגאים בכם &ndash; ומאחלים לכולנו שנה של שקט וביטחון.</p>
+      <div style="margin:24px auto 0;font-size:4rem;text-align:center;">🫡</div>
+      <div class="miluim-names">
+        <span>צבי בנזריהם</span>
+        <span>עמית וגנר</span>
+        <span>נועה אלמסי</span>
+        <span>זויה קרמרובסקי</span>
+        <span>יונתן בונפיל</span>
+        <span>תומר דורי</span>
+        <span>אלדד אברג'יל</span>
+        <span>נתנאל קרני</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRESS ══ -->
+<section class="section section--alt" id="press">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">כתבו עלינו</span>
+      <h2 class="section-title">פורסם בתקשורת</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:560px;margin-left:auto;margin-right:auto;line-height:2;">השנה זכינו גם לכיסוי תקשורתי יפה &ndash; הנה כמה מהכתבות שדיברו עלינו.</p>
+    </div>
+    <div class="press-grid reveal stagger">
+
+      <a href="https://www.mako.co.il/news-business/duns_100-realestate/Article-cb0607ef686ef91027.htm" target="_blank" class="press-card">
+        <img src="images/13-press-almog-portal.png" alt="אלמוג פורטל" class="press-img" onerror="this.src='images/placeholder.svg'">
+        <div class="press-body">
+          <div class="press-title">לא כל מי שיודע לנהל פרויקטים במרכז הארץ, יודע להוביל פרויקטים בצפון המדינה</div>
+          <div class="press-byline">אלמוג פורטל &bull; Duns 100</div>
+          <div class="press-date-row">
+            <span class="press-date">פורסם: 09.08.26, 15:53</span>
+            <img src="images/13-press-n12-logo.png" alt="N12" class="press-brand" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </a>
+
+      <a href="https://finance.walla.co.il/item/3858878" target="_blank" class="press-card">
+        <img src="images/13-press-shiba-negev.png" alt="שיבא נגב" class="press-img" onerror="this.src='images/placeholder.svg'">
+        <div class="press-body">
+          <div class="press-title">מיליארדים בדרך לנגב: כך יוקם בית החולים הציבורי הגדול בישראל</div>
+          <div class="press-byline">אביחי חיים &bull; וואלה! פייננס</div>
+          <div class="press-date-row">
+            <span class="press-date">פורסם: 06.08.26, 14:07</span>
+            <img src="images/13-press-walla-logo.png" alt="וואלה" class="press-brand" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SUMMER GALLERY ══ -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">רגעים מהשנה שחלפה</span>
+      <h2 class="section-title">אירוע הקיץ</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:740px;margin-left:auto;margin-right:auto;line-height:2;">יש מסורות שלא מוותרים עליהן &ndash; ואירוע הקיץ שלנו הוא אחת מהן. בריכה, אוכל טוב, פינוקים. מה צריך יותר מזה?</p>
+    </div>
+    <div class="gallery-grid reveal stagger">
+      <a href="images/14-gallery-summer-1.png" class="gallery-item" data-idx="0"><img src="images/14-gallery-summer-1.png" alt="מהאירוע" onerror="this.src='images/placeholder.svg'"></a>
+      <a href="images/14-gallery-summer-2.png" class="gallery-item" data-idx="1"><img src="images/14-gallery-summer-2.png" alt="אירוע קיץ" onerror="this.src='images/placeholder.svg'"></a>
+      <a href="images/14-gallery-summer-3.png" class="gallery-item" data-idx="2"><img src="images/14-gallery-summer-3.png" alt="אירוע קיץ" onerror="this.src='images/placeholder.svg'"></a>
+      <a href="images/14-gallery-summer-5.png" class="gallery-item" data-idx="3"><img src="images/14-gallery-summer-5.png" alt="אירוע קיץ" onerror="this.src='images/placeholder.svg'"></a>
+      <a href="images/14-gallery-summer-6.png" class="gallery-item" data-idx="4"><img src="images/14-gallery-summer-6.png" alt="אירוע קיץ" onerror="this.src='images/placeholder.svg'"></a>
+      <a href="images/14-gallery-summer-7.png" class="gallery-item" data-idx="5"><img src="images/14-gallery-summer-7.png" alt="אירוע קיץ" onerror="this.src='images/placeholder.svg'"></a>
+      <a href="images/14-gallery-summer-8.png" class="gallery-item" data-idx="6"><img src="images/14-gallery-summer-8.png" alt="אירוע קיץ" onerror="this.src='images/placeholder.svg'"></a>
+      <a href="images/14-gallery-summer-9.png" class="gallery-item" data-idx="7"><img src="images/14-gallery-summer-9.png" alt="אירוע קיץ" onerror="this.src='images/placeholder.svg'"></a>
+      <a href="images/14-gallery-summer-4.png" class="gallery-item" data-idx="8"><img src="images/14-gallery-summer-4.png" alt="מהאירוע" onerror="this.src='images/placeholder.svg'"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY LIGHTBOX ══ -->
+<div class="gallery-lightbox" id="galleryLightbox">
+  <button class="gallery-lb-close" id="lbClose" aria-label="סגור">&times;</button>
+  <button class="gallery-lb-nav gallery-lb-prev" id="lbPrev" aria-label="הקודם">&#10094;</button>
+  <img class="gallery-lb-img" id="lbImg" src="" alt="">
+  <button class="gallery-lb-nav gallery-lb-next" id="lbNext" aria-label="הבא">&#10095;</button>
+  <div class="gallery-lb-counter" id="lbCounter"></div>
+</div>
+
+<!-- ══ QUIZ ══ -->
+<section class="section section--alt" id="quiz">
+  <div class="container">
+    <div class="crossword-block reveal">
+      <div class="cw-hero-banner">
+        <span class="section-tag">פינת הבידור</span>
+        <h2 class="section-title">חושבים שאתם מכירים אותנו?</h2>
+        <div class="section-rule"></div>
+        <p style="color: var(--text-secondary); font-size: 15.5px; max-width: 480px; margin: 20px auto 0; line-height: 2;">בלי רמזים ובלי גוגל &ndash; נראה אתכם צולחים את זה בלי טעויות.</p>
+      </div>
+      <div style="max-width:680px;margin:0 auto;">
+        <div id="quizContainer"></div>
+        <div id="quizResult" style="display:none;text-align:center;padding:48px 24px;">
+          <div style="font-size:3rem;margin-bottom:16px;" id="quizEmoji"></div>
+          <div style="font-family:'Heebo',sans-serif;font-size:2rem;font-weight:900;color:var(--navy);margin-bottom:8px;" id="quizScore"></div>
+          <p style="color:var(--text-secondary);font-size:1rem;" id="quizMsg"></p>
+          <button class="btn btn-dark" style="margin-top:24px;" onclick="resetQuiz()">נסו שוב</button>
+        </div>
+        <div style="display:flex;justify-content:center;gap:8px;margin-top:20px;" id="quizDots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ POEM ══ -->
+<section class="section" id="poem">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">במילים אחרות</span>
+      <h2 class="section-title">שיר לחג</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="poem-card reveal">
+      <span class="poem-corner poem-corner--tl"></span>
+      <span class="poem-corner poem-corner--tr"></span>
+      <span class="poem-corner poem-corner--bl"></span>
+      <span class="poem-corner poem-corner--br"></span>
+      <div class="poem-title">שוב היא כאן</div>
+      <div class="poem-author">שלומי שרים</div>
+      <div class="poem-divider"></div>
+
+      <div class="poem-stanza">
+        שׁוּב הִיא כָּאן<br>
+        מִתְדַּפֶּקֶת בְּלִי בּוּשָׁה<br>
+        שֵׁם פְּרָטִי: שָׁנָה<br>
+        שֵׁם מִשְׁפָּחָה: חֲדָשָׁה
+      </div>
+
+      <div class="poem-stanza">
+        וְגַם אִם לֹא תִּרְצֶה לִפְתוֹחַ<br>
+        הִיא מִתְפָּרֶצֶת בִּנְחִישׁוּת<br>
+        כְּמוֹ דּוֹרֶשֶׁת לֹא לִשְׁכּוֹחַ<br>
+        שֶׁהִיא לֹא בֶּאֱמֶת צְרִיכָה רְשׁוּת
+      </div>
+
+      <div class="poem-stanza">
+        וּבַמַּחֲזוֹרִיּוּת שֶׁל הַחַיִּים<br>
+        שָׁנָה יוֹצֵאת, שָׁנָה נִכְנֶסֶת<br>
+        שְׁלוֹשׁ מֵאוֹת שִׁישִׁים וַחֲמִישָׁה יָמִים<br>
+        וְעוֹד לֹא יָשַׁבְתָּ בַּמִּרְפֶּסֶת
+      </div>
+
+      <div class="poem-stanza">
+        וְלֹא סָפְרַת צִיפּוֹרִים שֶׁנּוֹדְדוֹת<br>
+        וְיֵשׁ עוֹד חֲלוֹמוֹת שֶׁלֹּא הִגְשַׁמְתָּ<br>
+        וְלֹא חָצִיתָ אוֹקְיָנוֹסִים וְיַבָּשׁוֹת<br>
+        וְיֵשׁ עוֹד מְדִינוֹת שֶׁלֹּא בִּקַּרְתָּ
+      </div>
+
+      <div class="poem-stanza">
+        וְלֹא סִיַּמְתָּ אֶת הַפְּרוֹיֵקְט<br>
+        וְהַסּוֹף שֶׁלּוֹ כְּלָל לֹא נִרְאָה בָּאוֹפֶק<br>
+        וְעוֹד קַבְּלָן אוֹטוֹטוֹ פּוֹשֵׁט<br>
+        אֶת הָרֶגֶל וּמַעֲלֶה לְךָ תַּ'דּוֹפֶק
+      </div>
+
+      <div class="poem-stanza">
+        וְהַמַּשְׁכַּנְתָּא עוֹד לוֹחֶצֶת<br>
+        וְיוֹקֵר הַמִּחְיָה מוֹסִיף לְהִשְׁתּוֹלֵל<br>
+        וְעוֹד פּוֹלִיטִיקַאי אָחוּז טָרֶפֶת<br>
+        שׁוֹלֵחַ אֶת הַצִּיבּוּר לְאֶלֶף עֲזָאזֵל
+      </div>
+
+      <div class="poem-stanza">
+        אָז אוּלַי עוֹד לֹא מַמָּשׁ הִסְפַּקְתָּ<br>
+        וְאַתָּה מוּפְתָּע שֶׁעוֹד שָׁנָה חוֹלֶפֶת<br>
+        אֲבָל הִנֵּה, שׁוּב הִיא כָּאן<br>
+        מְסַדֶּרֶת הִזְדַּמְּנוּת נוֹסֶפֶת
+      </div>
+
+      <div class="poem-stanza">
+        לְאַרְגֵּן אֶת כָּל הַמַּחְשָׁבוֹת<br>
+        לְתַקֵּן אֶת הַלֵּב הָמֵשׁוּבָּשׁ<br>
+        לַעֲשׂוֹת תְּשׁוּבָה, לְהִתְנַקּוֹת<br>
+        וְלִפְתוֹחַ דַּף לָבָן חָדָשׁ
+      </div>
+
+      <div class="poem-stanza">
+        וּכְשֶׁיּוֹרֵד אַט אַט הָעֶרֶב<br>
+        וְרוּחַ חַג עוֹטֶפֶת אֶת הָעִיר<br>
+        הִיא מִתְיַשֶּׁבֶת לְצִידְּךָ<br>
+        וּמִתְעַקֶּשֶׁת לְהַזְכִּיר
+      </div>
+
+      <div class="poem-stanza">
+        שֶׁצָּרִיךְ גַּם לַעֲצוֹר אֶת הַמֵּרוֹץ<br>
+        לְהִתְעַלֵּם מֵהַתִּקְתּוּק שֶׁל הַשָּׁעוֹן<br>
+        כִּי לִפְנֵי כָּל הַפְּרָסִים וְהַמֵּדַלְיוֹת<br>
+        הַמִּשְׁפָּחָה שֶׁלְּךָ תָּמִיד מָקוֹם רִאשׁוֹן
+      </div>
+
+      <div class="poem-ornament">&#10047; &#10047; &#10047;</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOCIAL ══ -->
+<section class="section section--alt" id="social">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">נשארים בקשר</span>
+      <h2 class="section-title">חפשו אותנו ברשתות</h2>
+      <div class="section-rule"></div>
+      <p style="margin-top:20px;color:var(--text-secondary);font-size:15.5px;max-width:820px;margin-left:auto;margin-right:auto;line-height:2;">רוצים לראות מה קורה אצלנו גם בין ניוזלטר לניוזלטר? עקבו אחרינו, שתפו והישארו מחוברים לעשייה של פורן שרים גם ברשת.</p>
+    </div>
+    <div class="social-grid reveal">
+      <a href="https://www.facebook.com/poranshrem" target="_blank" class="social-link">
+        <img src="images/17-social-facebook.png" alt="פייסבוק" onerror="this.src='images/placeholder.svg'">
+        <span>פייסבוק</span>
+      </a>
+      <a href="https://www.instagram.com/poran_shrem/" target="_blank" class="social-link">
+        <img src="images/17-social-instagram.png" alt="אינסטגרם" onerror="this.src='images/placeholder.svg'">
+        <span>אינסטגרם</span>
+      </a>
+      <a href="https://www.linkedin.com/company/poran-shrem" target="_blank" class="social-link">
+        <img src="images/17-social-linkedin.png" alt="לינקדאין" onerror="this.src='images/placeholder.svg'">
+        <span>לינקדאין</span>
+      </a>
+      <a href="https://www.tiktok.com/@poran_shrem" target="_blank" class="social-link">
+        <img src="images/17-social-tiktok.png" alt="טיק טוק" onerror="this.src='images/placeholder.svg'">
+        <span>טיק טוק</span>
+      </a>
+      <a href="https://poran-shrem.com/" target="_blank" class="social-link">
+        <img src="images/17-social-website.png" alt="אתר אינטרנט" onerror="this.src='images/placeholder.svg'">
+        <span>אתר אינטרנט</span>
+      </a>
+      <a href="https://www.duns100.co.il/%D7%A4%D7%95%D7%A8%D7%9F_%D7%A9%D7%A8%D7%99%D7%9D" target="_blank" class="social-link">
+        <img src="images/17-social-duns100.png" alt="דאנס 100" onerror="this.src='images/placeholder.svg'">
+        <span>דאנס 100</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<canvas id="confettiCanvas"></canvas>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-blessing">שָׁנָה טוֹבָה וּמְתוּקָה!</div>
+    <img src="images/1-hero-fruit-row.png" alt="תפוח, דבש ורימון" class="footer-hero-echo">
+    <div class="footer-copy">פורן שרים &copy; 2026. כל הזכויות שמורות.</div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll Reveal ──
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.06, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ── Confetti ──
+const confettiCanvas = document.getElementById('confettiCanvas');
+const ctx = confettiCanvas.getContext('2d');
+let confettiPieces = [];
+let confettiRunning = false;
+
+function resizeConfetti() {
+  confettiCanvas.width = window.innerWidth;
+  confettiCanvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeConfetti);
+resizeConfetti();
+
+function launchConfetti() {
+  if (confettiRunning) return;
+  confettiRunning = true;
+  const colors = ['#B8862E','#D9AE5C','#0D8496','#1A365D','#F7FAFC','#FFFFFF'];
+  for (let i = 0; i < 120; i++) {
+    confettiPieces.push({
+      x: Math.random() * confettiCanvas.width,
+      y: -20 - Math.random() * 200,
+      w: 6 + Math.random() * 6,
+      h: 4 + Math.random() * 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 4,
+      vy: 2 + Math.random() * 4,
+      rot: Math.random() * 360,
+      rotV: (Math.random() - 0.5) * 12,
+      life: 1
+    });
+  }
+  requestAnimationFrame(drawConfetti);
+}
+
+function drawConfetti() {
+  ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+  let alive = false;
+  confettiPieces.forEach(p => {
+    if (p.life <= 0) return;
+    alive = true;
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += 0.08;
+    p.rot += p.rotV;
+    if (p.y > confettiCanvas.height + 20) { p.life = 0; return; }
+    p.life -= 0.003;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rot * Math.PI / 180);
+    ctx.globalAlpha = Math.max(0, p.life);
+    ctx.fillStyle = p.color;
+    ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+    ctx.restore();
+  });
+  if (alive) requestAnimationFrame(drawConfetti);
+  else { confettiPieces = []; confettiRunning = false; ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height); }
+}
+
+// ── Nav Toggle ──
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
+const sectionEls = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 100;
+  sectionEls.forEach(s => {
+    const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+    if (!link) return;
+    if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) link.classList.add('active');
+    else link.classList.remove('active');
+  });
+});
+
+// ── Gallery Lightbox ──
+const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+const lightbox = document.getElementById('galleryLightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCounter = document.getElementById('lbCounter');
+let lbIndex = 0;
+
+function openLightbox(idx) {
+  lbIndex = idx;
+  showLightboxImage();
+  lightbox.classList.add('open');
+}
+function showLightboxImage() {
+  const item = galleryItems[lbIndex];
+  lbImg.src = item.getAttribute('href');
+  lbImg.alt = item.querySelector('img').alt;
+  lbCounter.textContent = `${lbIndex + 1} / ${galleryItems.length}`;
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+}
+function showNext() {
+  lbIndex = (lbIndex + 1) % galleryItems.length;
+  showLightboxImage();
+}
+function showPrev() {
+  lbIndex = (lbIndex - 1 + galleryItems.length) % galleryItems.length;
+  showLightboxImage();
+}
+
+galleryItems.forEach((item, idx) => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    openLightbox(idx);
+  });
+});
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbNext').addEventListener('click', showNext);
+document.getElementById('lbPrev').addEventListener('click', showPrev);
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowRight') showPrev();
+  else if (e.key === 'ArrowLeft') showNext();
+});
+
+// ── Quiz (company trivia — reused format from the previous newsletter) ──
+const allQuizQuestions = [
+  { q: 'לאיזה יעד טסה החברה לטיול חגיגות 20 שנה?', opts: ['ספרד', 'ישראל', 'גאורגיה', 'רומניה'], ans: 2 },
+  { q: 'באיזו שנה נוסדה פורן שרים?', opts: ['2005', '2004', '2006', '2007'], ans: 0 },
+  { q: 'באילו מהערים הבאות קיימים סניפים לחברה?', opts: ['ירושלים, בני ברק, עפולה ואשקלון', 'בני ברק, ת"א – יפו, מגדל העמק ודימונה', 'עפולה, אשדוד, נתניה, ירושלים', 'אשקלון, ירושלים, מגדל העמק וחולון'], ans: 0 },
+  { q: 'כמה קומות כולל מבנה הספרייה?', opts: ['9', '10', '8', '7'], ans: 1 },
+  { q: 'פרויקט גשר יצחק נבון בוצע בשיטת:', opts: ['יציקה במקום', 'דחיקה (Launching)', 'הרכבה טרומית', 'בנייה מודולרית'], ans: 1 },
+  { q: 'על פי איזו מתודולוגיה בינלאומית החברה מנהלת פרויקטים?', opts: ['ISO 9001', 'LEED', 'PMBOK', 'Six Sigma'], ans: 2 },
+  { q: 'מה המשמעות של עבודה עם מודל BIM?', opts: ['עובדים רק בתלת מימד', 'אין צורך בתוכניות', 'תיאום מערכות, מניעת התנגשויות ושיפור התכנון והביצוע', 'מיועד רק לאדריכלים'], ans: 2 },
+  { q: 'מה זה "נתיב קריטי" בפרויקט?', opts: ['הדרך הכי קצרה לאתר', 'הפעילויות שקובעות את משך הפרויקט', 'עבודות מסוכנות', 'עבודות תשתית'], ans: 1 },
+  { q: 'מה המשמעות של BIM?', opts: ['Building Information Management', 'Building Information Modeling', 'Business Information Modeling', 'Building Infrastructure Management'], ans: 1 },
+  { q: 'מהי מערכת Exponet המשמשת את החברה?', opts: ['מערכת לניהול חשבונות', 'מערכת לניהול מסמכים, תוכניות וגרסאות', 'מערכת שכר עובדים', 'מערכת תכנון אדריכלי'], ans: 1 },
+  { q: 'מערכת TOP Ramdor משמשת בעיקר ל־', opts: ['ניהול לוחות זמנים בלבד', 'ניהול פרויקטים, חשבונות, חוזים ובקרה תקציבית', 'שרטוט תוכניות', 'ניהול משאבי אנוש'], ans: 1 },
+  { q: 'Meeting Insights היא מערכת שמטרתה:', opts: ['ניהול עובדים', 'תיעוד פגישות, משימות והחלטות', 'ניהול מכרזים', 'תכנון קונסטרוקציה'], ans: 1 },
+  { q: 'מערכת Conqum משמשת ל־', opts: ['ניהול איכות, בדיקות וליקויים', 'הנהלת חשבונות', 'תכנון אדריכלי', 'ניהול שיווק'], ans: 0 },
+  { q: 'Microsoft Planner משמש את החברה ל־', opts: ['ניהול משימות צוות ומעקב ביצוע', 'תכנון תקציב', 'ניהול מודלים BIM', 'הפקת חשבוניות'], ans: 0 },
+  { q: 'היתרון המרכזי בשימוש במערכות דיגיטליות לניהול פרויקט הוא:', opts: ['הגדלת כמות הניירת', 'עבודה ללא תיעוד', 'שליטה, בקרה ושקיפות על הפרויקט בזמן אמת', 'ביטול הצורך בלוחות זמנים'], ans: 2 },
+  { q: 'מהו היתרון המרכזי בשימוש בכלי AI כמו MIA בניהול פרויקטים?', opts: ['הגדלת כמות המסמכים', 'קיצור לוחות זמנים וייעול תהליכים', 'החלפת מנהל הפרויקט', 'ביטול ישיבות'], ans: 1 },
+  { q: 'פרויקט המטבח בשיבא – כמה ארוחות עתיד לייצר המטבח ביום?', opts: ['כ־ 1,000 ארוחות', 'כ־ 5,000 ארוחות', 'כ־ 16,000 ארוחות', 'כ־ 50,000 ארוחות'], ans: 2 },
+  { q: 'באילו ערים מנהלת/ניהלה חברת פורן שרים פרויקטים של ישיבות?', opts: ['קרית אתא, בני ברק, אלעד', 'חיפה, ירושלים, תל אביב', 'אשדוד, נתניה, ראשון לציון', 'באר שבע, אילת, טבריה'], ans: 0 },
+  { q: 'בבניין הספרייה הלאומית – כמה אבנים כוללת מערכת הקירור Rock Store?', opts: ['50,000 אבנים', '120,000 אבנים', '270,000 אבנים', '500,000 אבנים'], ans: 2 },
+  { q: 'פרויקט "בית הנבחרות" בצפון כולל בין היתר:', opts: ['הקמת היכל ספורט מקורה בלבד', 'הקמת 2 מגרשי משחק (דשא טבעי ודשא סינטטי) ומבנה לימוד, מלתחות ותפעול', 'הקמת בית מלון לספורטאים', 'הקמת קניון ומשרדים'], ans: 1 },
+  { q: 'מה היה אחד האתגרים המרכזיים בתכנון רשת שבילי האופניים בנתניה ופתח תקווה?', opts: ['תכנון בשטח פתוח בלבד', 'תכנון במרחב עירוני קיים תוך התאמה לתשתיות קיימות', 'תכנון ללא תיאום עם גורמים נוספים', 'תכנון בתוך מבנה'], ans: 1 },
+  { q: 'פרויקט מחלף עיסאוויה – מהו אורך המקטע בפרויקט?', opts: ['כ־ 500 מטר', 'כ־ 1 ק"מ', 'כ־ 2 ק"מ', 'כ־ 5 ק"מ'], ans: 2 },
+  { q: 'פרויקט כביש 90 מקטע 125–100 כולל:', opts: ['הקמת מבנה ציבור', 'הרחבת כביש קיים מחד־נתיבי לדו־נתיבי', 'סלילת שביל אופניים', 'הקמת גשר רכבת'], ans: 1 },
+  { q: 'מתחם חניון הנתיבים המהירים בשפיים – מה כולל המבנה?', opts: ['מרכז מסחרי', 'חדר בקרה ומשרדי תמך', 'מבנה מגורים', 'בית ספר'], ans: 1 },
+  { q: 'כמה פרויקטים של קאנטרי קלאב ביצעה/מבצעת חברת פורן שרים?', opts: ['1', '2', '3', '5'], ans: 1 },
+  { q: 'פרויקט "בית המגן" בתל אביב – מהו ייעוד המבנה?', opts: ['משרדים בלבד', 'מלון בלבד', 'מלון ומגורים (שימושים מעורבים)', 'קניון'], ans: 2 },
+  { q: 'מהו האתגר המרכזי בניהול פרויקט בבית חולים פעיל כמו איכילוב?', opts: ['גובה המבנה', 'שמירה על פעילות שוטפת של בית החולים בזמן העבודות', 'חוסר מקום חניה', 'עיצוב פנים'], ans: 1 },
+  { q: 'איזה פרויקט נועד לחזק קישוריות בכביש 444 לתחנת רכבת ראש העין צפון?', opts: ['מחלף עיסאוויה', 'מחלף קסם', 'כביש 90', 'נתיבים מהירים שפיים'], ans: 1 },
+  { q: 'כמה יחידות דיור נוספו במסגרת פרויקט "עד 120"?', opts: ['24', '36', '48', '60'], ans: 2 },
+  { q: 'קריית ההדרכה של צה"ל הוקמה במודל DBOT. מה המשמעות של DBOT?', opts: ['תכנון בלבד', 'תכנון, ביצוע ומסירה', 'תכנון, הקמה, מימון ותפעול', 'ביצוע בלבד'], ans: 2 },
+  { q: 'תוך כמה זמן הוקמה קריית ההדרכה?', opts: ['שנתיים', 'כ־ 3.5 שנים', '5 שנים', '10 שנים'], ans: 1 },
+  { q: 'מה כולל המבנה החדש של מכון פרדס ללימודי היהדות בירושלים?', opts: ['משרדים בלבד', 'אודיטוריום, בית מדרש, חדרי הרצאות, חדרי לימוד וסגל וקפטריה', 'מרכז מסחרי', 'מבנה מגורים'], ans: 1 },
+  { q: 'פרויקט "מהיר לעיר" במקטע מחלף קסם – תחנת רכבת ראש העין צפון כלל:', opts: ['סלילת כביש לרכב פרטי בלבד', 'הקמת נתיבי תחבורה ציבורית לכיוון צפון ולכיוון דרום', 'הקמת שביל אופניים בלבד', 'הקמת גשר'], ans: 1 },
+  { q: 'פרויקט דפו אשקלון נועד בעיקר עבור:', opts: ['תחזוקת אוטובוסים', 'דיור, טיפול ותחזוקה של רכבות חשמליות', 'תחנת נוסעים', 'מבנה משרדים'], ans: 1 },
+  { q: 'מה גודל מוסך הרכבות החשמליות (EMU) בפרויקט דפו אשקלון?', opts: ['כ־ 2,000 מ"ר', 'כ־ 5,000 מ"ר', 'כ־ 10,000 מ"ר', 'כ־ 25,000 מ"ר'], ans: 2 },
+  { q: 'מתחם לוד הוא דוגמה ל־', opts: ['מבנה מגורים', 'מרכז מסחרי', 'מתקן תחבורה משולב (רכבת ואוטובוסים)', 'מבנה חינוך'], ans: 2 },
+  { q: 'פרויקט שגרירות ישראל באבו דאבי מדגים את יכולת החברה לנהל פרויקטים:', opts: ['בישראל בלבד', 'בפרויקטים בינלאומיים ומורכבים', 'בפרויקטי מגורים בלבד', 'בפרויקטים קטנים בלבד'], ans: 1 },
+];
+
+const QUIZ_PER_ROUND = 10;
+let quizScore = 0;
+let quizCurrent = 0;
+let quizRound = [];
+let quizTotal = QUIZ_PER_ROUND;
+const dotsContainer = document.getElementById('quizDots');
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function renderQuizCard(idx) {
+  const item = quizRound[idx];
+  const container = document.getElementById('quizContainer');
+  container.innerHTML = `
+    <div class="quiz-card" style="display:block;">
+      <div class="quiz-counter">שאלה <span class="quiz-current">${idx + 1}</span> מתוך <span class="quiz-total">${quizTotal}</span></div>
+      <div class="quiz-question">${item.q}</div>
+      <div class="quiz-options">
+        ${item.opts.map((o, i) => `<button class="quiz-option${i === item.ans ? ' correct-ans' : ''}" data-ans="${i}">${o}</button>`).join('')}
+      </div>
+    </div>`;
+}
+
+function initQuiz() {
+  quizScore = 0;
+  quizCurrent = 0;
+  quizRound = shuffle([...allQuizQuestions]).slice(0, QUIZ_PER_ROUND);
+  quizTotal = quizRound.length;
+  document.getElementById('quizContainer').style.display = 'block';
+  document.getElementById('quizResult').style.display = 'none';
+  dotsContainer.innerHTML = '';
+  for (let i = 0; i < quizTotal; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'quiz-dot' + (i === 0 ? ' active' : '');
+    dotsContainer.appendChild(dot);
+  }
+  renderQuizCard(0);
+}
+
+document.getElementById('quizContainer').addEventListener('click', (e) => {
+  const btn = e.target.closest('.quiz-option');
+  if (!btn || btn.classList.contains('picked')) return;
+  const card = btn.closest('.quiz-card');
+  const options = card.querySelectorAll('.quiz-option');
+  const isCorrect = btn.classList.contains('correct-ans');
+
+  options.forEach(o => o.classList.add('disabled'));
+  btn.classList.add('picked');
+
+  if (isCorrect) {
+    btn.classList.add('right');
+    quizScore++;
+    dotsContainer.children[quizCurrent].classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    dotsContainer.children[quizCurrent].classList.add('incorrect');
+    card.querySelector('.correct-ans').classList.add('reveal-right');
+  }
+
+  setTimeout(() => {
+    quizCurrent++;
+    if (quizCurrent < quizTotal) {
+      if (dotsContainer.children[quizCurrent]) dotsContainer.children[quizCurrent].classList.add('active');
+      renderQuizCard(quizCurrent);
+    } else {
+      document.getElementById('quizContainer').style.display = 'none';
+      const result = document.getElementById('quizResult');
+      result.style.display = 'block';
+      document.getElementById('quizScore').textContent = `${quizScore} מתוך ${quizTotal}`;
+      if (quizScore === quizTotal) {
+        document.getElementById('quizEmoji').textContent = '\u{1F3C6}';
+        document.getElementById('quizMsg').textContent = 'מושלם! אתם מכירים את פורן שרים בצורה מדהימה!';
+        launchConfetti();
+      } else if (quizScore >= quizTotal * 0.6) {
+        document.getElementById('quizEmoji').textContent = '\u{1F44F}';
+        document.getElementById('quizMsg').textContent = 'יפה מאוד! אתם מכירים את החברה ממש טוב!';
+      } else {
+        document.getElementById('quizEmoji').textContent = '\u{1F4AA}';
+        document.getElementById('quizMsg').textContent = 'יש מקום לשיפור... נסו שוב!';
+      }
+    }
+  }, 1200);
+});
+
+function resetQuiz() { initQuiz(); }
+initQuiz();
+
+// ── Back to Top Button ──
+const bttBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  bttBtn.classList.toggle('visible', window.scrollY > 600);
+}, { passive: true });
+bttBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ── Countdown to Erev Rosh Hashana 5787 (sunset Sep 11, 2026, Israel) ──
+const holidayDate = new Date('2026-09-11T18:30:00+03:00');
+function updateCountdown() {
+  const now = new Date();
+  const diff = holidayDate - now;
+  if (diff <= 0) {
+    document.getElementById('heroCountdown').innerHTML = '<span style="color:var(--gold);font-size:1.2rem;font-weight:700;">שנה טובה ומתוקה! 🍯</span>';
+    return;
+  }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cdDays').textContent = d;
+  document.getElementById('cdHours').textContent = h;
+  document.getElementById('cdMins').textContent = String(m).padStart(2, '0');
+  document.getElementById('cdSecs').textContent = String(s).padStart(2, '0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ── Honey Jar Easter Egg ──
+let honeyClicks = 0;
+let honeyTimer = null;
+setTimeout(() => {
+  const hint = document.getElementById('honeyHint');
+  hint.classList.add('visible');
+  setTimeout(() => hint.classList.remove('visible'), 6000);
+}, 30000);
+document.querySelectorAll('.nav-logo, .footer-logo').forEach(logo => {
+  logo.style.cursor = 'pointer';
+  logo.addEventListener('click', (e) => {
+    e.preventDefault();
+    honeyClicks++;
+    clearTimeout(honeyTimer);
+    if (honeyClicks >= 3) {
+      honeyClicks = 0;
+      document.getElementById('honeyOverlay').classList.add('active');
+      launchConfetti();
+    } else {
+      honeyTimer = setTimeout(() => { honeyClicks = 0; }, 2000);
+    }
+  });
+});
+
+// ── Subtle Parallax ──
+const parallaxSections = document.querySelectorAll('.hero, .cw-section-bg');
+window.addEventListener('scroll', () => {
+  parallaxSections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const speed = 0.15;
+    if (rect.bottom > 0 && rect.top < window.innerHeight) {
+      section.style.backgroundPositionY = (rect.top * speed) + 'px';
+    }
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
