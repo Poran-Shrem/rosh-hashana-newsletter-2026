@@ -284,9 +284,6 @@
     .completed-status svg { width: 16px; height: 16px; stroke: var(--teal); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
     .completed-credits { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
     .completed-credits strong { color: var(--text-secondary); }
-    @media (min-width: 901px) {
-      #updates .completed-card { grid-template-columns: 380px 1fr; height: 300px; }
-    }
 
     /* ── Births / Weddings ── */
     .births-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; max-width: 720px; margin: 0 auto; }
@@ -534,8 +531,6 @@
       .completed-card { grid-template-columns: 1fr; height: auto; gap: 0; }
       .completed-img { max-height: 240px; }
       .completed-body { height: 198px; overflow: hidden; }
-      #updates .completed-img { max-height: 320px; }
-      #updates .completed-body { height: 260px; }
       .hero-stats { flex-direction: column; border: none; background: rgba(255,255,255,0.8); }
     }
     @media (max-width: 640px) {
