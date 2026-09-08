@@ -284,6 +284,9 @@
     .completed-status svg { width: 16px; height: 16px; stroke: var(--teal); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
     .completed-credits { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
     .completed-credits strong { color: var(--text-secondary); }
+    @media (min-width: 901px) {
+      #updates .completed-card { grid-template-columns: 200px 1fr; height: 150px; }
+    }
 
     /* ── Births / Weddings ── */
     .births-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; max-width: 720px; margin: 0 auto; }
@@ -670,6 +673,7 @@
       <li><a href="#births">האנשים שלנו</a></li>
       <li><a href="#updates">מה חדש</a></li>
       <li><a href="#gallery">לקינוח</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSetfOgzl_BmcsYHH70WCW8RJDCKuY0KrtnyCR9WBcB6g8BmHA/viewform" target="_blank">הצעת ייעול</a></li>
     </ul>
   </div>
 </nav>
